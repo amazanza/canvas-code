@@ -1,0 +1,2020 @@
+/* Variables generales de la web.
+   Aquí se guardan los colores y las tipografías para reutilizarlos en todo el CSS. */
+:root {
+  --azul-noche: #111827;
+  --blanco-roto: #F5F1E8;
+  --verde: #234E52;
+  --coral: #D96C5F;
+  --azul-piscina: #63BFD1;
+
+  --titulo: "Fraunces", serif;
+  --texto: "Nunito", sans-serif;
+  --mono: "Space Mono", monospace;
+}
+
+/* Hace que el tamaño de las cajas incluya el padding y el borde.
+   Así es más fácil controlar los anchos. */
+* {
+  box-sizing: border-box;
+}
+
+/* Estilos básicos del cuerpo de la página. */
+body {
+  margin: 0;
+  font-family: var(--texto);
+  background-color: var(--blanco-roto);
+  color: var(--azul-noche);
+}
+
+/* Las imágenes no se salen de su contenedor. */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Los enlaces heredan el color del texto donde estén colocados. */
+a {
+  color: inherit;
+}
+
+/* Los elementos de formulario usan la misma tipografía que el resto de la web. */
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Contenedor general para centrar el contenido y limitar su anchura. */
+.container {
+  width: 90%;
+  max-width: 1152px;
+  margin: 0 auto;
+}
+
+/* Enlace para saltar al contenido principal.
+   Sirve para mejorar la accesibilidad con teclado. */
+.skip-link {
+  position: absolute;
+  top: -50px;
+  left: 16px;
+  background-color: var(--coral);
+  color: var(--azul-noche);
+  padding: 8px 12px;
+  z-index: 20;
+}
+
+/* El enlace aparece cuando recibe el foco. */
+.skip-link:focus {
+  top: 16px;
+}
+
+/* Clase para ocultar texto visualmente, pero mantenerlo para lectores de pantalla. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+
+/* Estilo visible cuando se navega con teclado. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--azul-piscina);
+  outline-offset: 3px;
+}
+
+/* Header */
+
+/* Cabecera principal de la web.
+   Se queda fija arriba al hacer scroll. */
+.site-header {
+  background-color: var(--blanco-roto);
+  border-bottom: 1px solid rgba(17, 24, 39, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 15;
+}
+
+/* Organiza logo, menú y botón de entradas en una misma línea. */
+.header-content {
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* Enlace que contiene el logo. */
+.logo-link {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Tamaño del logo. */
+.logo {
+  width: 150px;
+  height: auto;
+}
+
+/* Botón del menú móvil. */
+.menu-toggle {
+  background-color: transparent;
+  border: 1px solid var(--azul-noche);
+  color: var(--azul-noche);
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 0;
+}
+
+/* Menú principal.
+   En móvil aparece cerrado por defecto. */
+.main-nav {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 60px;
+  width: 100%;
+  padding: 18px 0;
+  background-color: var(--blanco-roto);
+  border-bottom: 1px solid rgba(17, 24, 39, 0.15);
+}
+
+/* Clase que abre el menú cuando se pulsa el botón. */
+.main-nav.is-open {
+  display: block;
+}
+
+/* Quita los puntos de la lista del menú. */
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Separación entre enlaces del menú en móvil. */
+.main-nav li {
+  margin-bottom: 12px;
+}
+
+/* Estilo de los enlaces del menú. */
+.main-nav a {
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Color del enlace activo o al pasar el ratón. */
+.main-nav a:hover,
+.main-nav a.active {
+  color: var(--verde);
+}
+
+/* El botón de entradas se oculta en móvil al principio. */
+.header-button {
+  display: none;
+}
+
+/* Da color especial al enlace de entradas dentro del menú móvil. */
+.nav-entradas a {
+  color: var(--verde);
+}
+
+/* Botones */
+
+/* Estilo general de los botones principales. */
+.button,
+.header-button {
+  background-color: var(--verde);
+  color: var(--blanco-roto);
+  border: 1px solid var(--verde);
+  padding: 9px 18px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 0;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Cambio de color al pasar el ratón por encima de los botones. */
+.button:hover,
+.header-button:hover {
+  background-color: var(--azul-piscina);
+  border-color: var(--azul-piscina);
+  color: var(--azul-noche);
+}
+
+/* Estilo para botones desactivados en formularios. */
+.button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* Botón más pequeño para enlaces secundarios. */
+.button-small {
+  padding: 8px 14px;
+  font-size: 14px;
+}
+
+/* Botón secundario sobre fondos oscuros. */
+.button-secundario {
+  background-color: transparent;
+  border-color: var(--blanco-roto);
+  color: var(--blanco-roto);
+}
+
+/* Cambio de color del botón secundario al pasar el ratón. */
+.button-secundario:hover {
+  background-color: var(--azul-piscina);
+  border-color: var(--azul-piscina);
+  color: var(--azul-noche);
+}
+
+/* Botones claros usados en hero y secciones de comunidad. */
+.button-hero-claro,
+.button-encuentro-claro {
+  background-color: var(--blanco-roto);
+  border-color: var(--blanco-roto);
+  color: var(--azul-noche);
+}
+
+/* Hover de los botones claros. */
+.button-hero-claro:hover,
+.button-encuentro-claro:hover {
+  background-color: var(--azul-piscina);
+  border-color: var(--azul-piscina);
+  color: var(--azul-noche);
+}
+
+/* Botones oscuros o transparentes usados sobre fondos de color. */
+.button-hero-oscuro,
+.button-encuentro-oscuro {
+  background-color: transparent;
+  border-color: rgba(245, 241, 232, 0.65);
+  color: var(--blanco-roto);
+}
+
+/* Hover de los botones oscuros. */
+.button-hero-oscuro:hover,
+.button-encuentro-oscuro:hover {
+  background-color: var(--azul-piscina);
+  border-color: var(--azul-piscina);
+  color: var(--azul-noche);
+}
+
+/* Enlace sencillo sin caja de botón. */
+.simple-link {
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* Cambio de color del enlace sencillo. */
+.simple-link:hover {
+  color: var(--azul-piscina);
+}
+
+/* Hero común */
+
+/* Estilo compartido para las secciones principales de inicio, sobre y exposición. */
+.hero-inicio,
+.hero-sobre,
+.hero-exposicion {
+  position: relative;
+  min-height: 430px;
+  overflow: hidden;
+  color: var(--blanco-roto);
+}
+
+/* Imagen de fondo del hero. */
+.hero-imagen {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Capa oscura sobre la imagen para que el texto se lea mejor. */
+.hero-capa {
+  position: relative;
+  min-height: 430px;
+  background-color: rgba(17, 24, 39, 0.36);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Contenido centrado dentro del hero. */
+.hero-contenido {
+  text-align: center;
+  max-width: 760px;
+}
+
+/* Título principal del hero. */
+.hero-contenido h1 {
+  font-family: var(--titulo);
+  font-size: 42px;
+  line-height: 1.05;
+  margin: 0 0 16px;
+}
+
+/* Texto del hero. */
+.hero-contenido p {
+  max-width: 620px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Coloca los botones del hero. En móvil quedan en columna. */
+.hero-botones {
+  margin-top: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Elementos generales */
+
+/* Etiquetas pequeñas que aparecen encima de algunos títulos. */
+.etiqueta-seccion {
+  margin: 0 0 12px;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--azul-piscina);
+}
+
+/* Variante de etiqueta para fondos claros. */
+.etiqueta-oscura {
+  color: var(--verde);
+}
+
+/* Bloque de título común para varias secciones. */
+.titulo-seccion {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 34px;
+}
+
+/* Títulos de sección. */
+.titulo-seccion h2 {
+  margin: 0 0 18px;
+  font-family: var(--titulo);
+  font-size: 34px;
+  line-height: 1.1;
+}
+
+/* Texto claro para títulos colocados sobre fondos oscuros. */
+.titulo-claro h2,
+.titulo-claro p {
+  color: var(--blanco-roto);
+}
+
+/* Centra botones colocados al final de algunas secciones. */
+.boton-centrado {
+  text-align: center;
+  margin-top: 36px;
+}
+
+/* Inicio: descripción */
+
+/* Sección de descripción del festival en la página de inicio. */
+.descripcion-real {
+  background-color: var(--azul-noche);
+  color: var(--blanco-roto);
+  padding: 64px 0;
+  text-align: center;
+}
+
+/* Limita el ancho del texto de descripción. */
+.descripcion-contenido {
+  max-width: 760px;
+}
+
+/* Título de la descripción. */
+.descripcion-real h2 {
+  margin: 0 0 18px;
+  font-family: var(--titulo);
+  font-size: 34px;
+  line-height: 1.1;
+}
+
+/* Texto de la descripción. */
+.descripcion-real p {
+  line-height: 1.6;
+}
+
+/* Enlaces de la sección de descripción. */
+.descripcion-enlaces {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+}
+
+/* Inicio: obras */
+
+/* Sección de obras destacadas de la página de inicio. */
+.obras-real {
+  padding: 64px 0;
+  background-color: var(--blanco-roto);
+}
+
+/* Rejilla donde se colocan las tarjetas de obras. */
+.obras-grid {
+  display: grid;
+  gap: 24px;
+}
+
+/* Tarjeta de cada obra. */
+.obra-card {
+  background-color: #ffffff;
+  border: 1px solid rgba(17, 24, 39, 0.18);
+}
+
+/* Imagen de las tarjetas de obras. */
+.obra-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* Contenido de texto dentro de cada tarjeta de obra. */
+.obra-texto {
+  padding: 20px;
+}
+
+/* Categoría pequeña de cada obra. */
+.obra-categoria {
+  margin: 0 0 8px;
+  font-family: var(--mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--verde);
+}
+
+/* Título de cada obra. */
+.obra-card h3 {
+  margin: 0 0 10px;
+  font-family: var(--titulo);
+  font-size: 24px;
+}
+
+/* Texto descriptivo de cada obra. */
+.obra-card p {
+  line-height: 1.5;
+}
+
+/* Enlace de cada obra. */
+.obra-link {
+  display: inline-block;
+  margin-top: 6px;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--verde);
+}
+
+/* Hover del enlace de obra. */
+.obra-link:hover {
+  color: var(--azul-piscina);
+}
+
+/* Inicio: artistas */
+
+/* Sección de artistas destacados en la página de inicio. */
+.artistas-real {
+  background-color: var(--verde);
+  color: var(--blanco-roto);
+  padding: 64px 0;
+}
+
+/* Rejilla para las tarjetas de artistas. */
+.artistas-grid {
+  display: grid;
+  gap: 28px;
+}
+
+/* Tarjeta de artista. */
+.artista-card {
+  text-align: center;
+}
+
+/* Imagen principal del artista. */
+.artista-card > img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Texto de cada artista. */
+.artista-texto {
+  padding: 18px 10px 0;
+}
+
+/* Nombre del artista. */
+.artista-texto h3 {
+  margin: 0 0 6px;
+  font-family: var(--titulo);
+  font-size: 24px;
+}
+
+/* Descripción breve del artista. */
+.artista-texto p {
+  margin: 0;
+}
+
+/* Iconos de redes sociales del artista. */
+.artista-redes {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+/* Tamaño de los iconos de redes. */
+.artista-redes img {
+  width: 18px;
+  height: 18px;
+}
+
+/* Sobre el festival: historia */
+
+/* Sección de historia del festival. */
+.historia-sobre {
+  background-color: var(--azul-noche);
+  color: var(--blanco-roto);
+  padding: 64px 0;
+  text-align: center;
+}
+
+/* Contenido de la sección historia. */
+.historia-contenido {
+  max-width: 1152px;
+}
+
+/* Título de historia. */
+.historia-contenido h2 {
+  margin: 0 0 18px;
+  font-family: var(--titulo);
+  font-size: 34px;
+  line-height: 1.1;
+}
+
+/* Texto de historia. */
+.historia-contenido p {
+  max-width: 640px;
+  margin: 0 auto 24px;
+  line-height: 1.6;
+}
+
+/* Imagen de la sección historia. */
+.historia-contenido img {
+  width: 100%;
+  margin-top: 42px;
+  height: 260px;
+  object-fit: cover;
+}
+
+/* Sobre el festival: concepto */
+
+/* Sección con imagen de fondo sobre el concepto del festival. */
+.concepto-sobre {
+  background-image: url("../img/Festival/Interferencia.png");
+  background-size: cover;
+  background-position: center;
+  color: var(--blanco-roto);
+}
+
+/* Capa sobre la imagen de fondo del concepto. */
+.concepto-capa {
+  background-color: rgba(17, 24, 39, 0.28);
+  padding: 72px 0;
+}
+
+/* Contenido centrado de la sección concepto. */
+.concepto-contenido {
+  max-width: 720px;
+  text-align: center;
+}
+
+/* Título de concepto. */
+.concepto-contenido h2 {
+  margin: 0 0 18px;
+  font-family: var(--titulo);
+  font-size: 34px;
+  line-height: 1.1;
+}
+
+/* Texto de concepto. */
+.concepto-contenido p {
+  margin: 0 auto 24px;
+  line-height: 1.6;
+}
+
+/* Sobre el festival: organizadores */
+
+/* Sección de organizadores. */
+.organizadores-sobre {
+  background-color: var(--verde);
+  color: var(--blanco-roto);
+  padding: 64px 0;
+}
+
+/* Rejilla de organizadores. */
+.organizadores-grid {
+  display: grid;
+  gap: 42px;
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Imagen circular de cada organizador. */
+.organizador-mini > img {
+  width: 78px;
+  height: 78px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto 14px;
+}
+
+/* Nombre del organizador. */
+.organizador-mini h3 {
+  margin: 0 0 6px;
+  font-family: var(--titulo);
+  font-size: 22px;
+}
+
+/* Cargo del organizador. */
+.organizador-cargo {
+  margin: 0 0 10px;
+  font-weight: 700;
+}
+
+/* Texto de cada organizador. */
+.organizador-mini p {
+  line-height: 1.5;
+}
+
+/* Redes sociales de los organizadores. */
+.organizador-redes {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+/* Iconos de redes de los organizadores. */
+.organizador-redes img {
+  width: 18px;
+  height: 18px;
+}
+
+/* Sobre el festival: patrocinadores */
+
+/* Sección de patrocinadores. */
+.patrocinadores-sobre {
+  background-color: #ffffff;
+  padding: 54px 0;
+  text-align: center;
+}
+
+/* Título de patrocinadores. */
+.patrocinadores-sobre h2 {
+  margin: 0 0 28px;
+  font-family: var(--mono);
+  font-size: 14px;
+}
+
+/* Rejilla de logos de patrocinadores. */
+.patro-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  align-items: center;
+}
+
+/* Tamaño de los logos de patrocinadores. */
+.patro-grid img {
+  max-width: 130px;
+  max-height: 58px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+/* Exposición: arte generativo */
+
+/* Sección que explica qué es el arte generativo. */
+.arte-generativo {
+  background-color: var(--azul-noche);
+  color: var(--blanco-roto);
+  padding: 64px 0;
+}
+
+/* Contenedor del texto de arte generativo. */
+.arte-generativo-contenido {
+  max-width: 720px;
+}
+
+/* Título de arte generativo. */
+.arte-generativo h2 {
+  margin: 0 0 20px;
+  font-family: var(--titulo);
+  font-size: 38px;
+  line-height: 1.05;
+}
+
+/* Párrafos de arte generativo. */
+.arte-generativo p {
+  line-height: 1.6;
+}
+
+/* Exposición: galería interactiva */
+
+/* Sección de galería interactiva. */
+.galeria-interactiva {
+  background-color: var(--blanco-roto);
+  padding: 64px 0;
+}
+
+/* Rejilla de texto e imagen de galería. */
+.galeria-grid {
+  display: grid;
+  gap: 32px;
+  align-items: center;
+}
+
+/* Título de la galería interactiva. */
+.galeria-texto h2 {
+  margin: 0 0 18px;
+  font-family: var(--titulo);
+  font-size: 34px;
+}
+
+/* Icono de la galería. */
+.galeria-icono {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  margin-bottom: 16px;
+}
+
+/* Texto de la galería. */
+.galeria-texto p {
+  line-height: 1.6;
+}
+
+/* Botón de la galería. */
+.galeria-boton {
+  margin-top: 18px;
+}
+
+/* Imagen de la sección galería. */
+.galeria-imagen img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+/* Exposición: cómo interactuar */
+
+/* Sección que explica cómo interactuar con las obras. */
+.interactuar-obras {
+  background-color: var(--verde);
+  color: var(--blanco-roto);
+  padding: 64px 0;
+}
+
+/* Rejilla de tarjetas de interacción. */
+.interaccion-grid {
+  display: grid;
+  gap: 20px;
+}
+
+/* Tarjeta de interacción. */
+.interaccion-card {
+  border: 1px solid rgba(245, 241, 232, 0.35);
+  padding: 24px;
+  background-color: rgba(17, 24, 39, 0.16);
+}
+
+/* Icono de cada tarjeta de interacción. */
+.interaccion-card img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+/* Título de cada tarjeta de interacción. */
+.interaccion-card h3 {
+  margin: 0 0 12px;
+  font-family: var(--titulo);
+  font-size: 26px;
+}
+
+/* Texto de cada tarjeta de interacción. */
+.interaccion-card p {
+  line-height: 1.5;
+}
+
+/* Enlaces de las tarjetas de interacción. */
+.interaccion-card a {
+  color: var(--blanco-roto);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* Hover de los enlaces de interacción. */
+.interaccion-card a:hover {
+  color: var(--azul-piscina);
+}
+
+/* Exposición: obras destacadas */
+
+/* Sección de obras destacadas dentro de Exposición. */
+.obras-exposicion {
+  background-color: var(--blanco-roto);
+  padding: 64px 0;
+}
+
+/* Rejilla de obras destacadas. */
+.obras-expo-grid {
+  display: grid;
+  gap: 30px;
+  text-align: center;
+}
+
+/* Imagen de cada obra destacada. */
+.obra-expo-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+/* Título de obra destacada. */
+.obra-expo-card h3 {
+  margin: 18px 0 10px;
+  font-family: var(--titulo);
+  font-size: 26px;
+}
+
+/* Texto de obra destacada. */
+.obra-expo-card p {
+  line-height: 1.5;
+}
+
+/* Enlace de obra destacada. */
+.obra-expo-card a {
+  display: inline-block;
+  margin-top: 8px;
+  color: var(--verde);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Hover de enlace de obra destacada. */
+.obra-expo-card a:hover {
+  color: var(--azul-piscina);
+}
+
+/* Exposición: artistas */
+
+/* Sección de artistas de la exposición. */
+.artistas-exposicion {
+  background-color: var(--verde);
+  color: var(--blanco-roto);
+  padding: 64px 0;
+}
+
+/* Rejilla de artistas de la exposición. */
+.artistas-expo-grid {
+  display: grid;
+  gap: 24px;
+}
+
+/* Tarjeta de artista de la exposición. */
+.artista-expo-card {
+  background-color: rgba(17, 24, 39, 0.25);
+}
+
+/* Imagen de artista.
+   object-position ajusta el recorte para que se vea mejor la cabeza. */
+.artista-expo-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  object-position: center 25%;
+}
+
+/* Texto de la tarjeta de artista. */
+.artista-expo-texto {
+  padding: 22px;
+}
+
+/* Categoría pequeña del artista. */
+.artista-expo-texto p:first-child {
+  margin: 0 0 8px;
+  font-family: var(--mono);
+  font-size: 12px;
+}
+
+/* Nombre del artista. */
+.artista-expo-texto h3 {
+  margin: 0 0 10px;
+  font-family: var(--titulo);
+  font-size: 28px;
+}
+
+/* Texto descriptivo del artista. */
+.artista-expo-texto p {
+  line-height: 1.5;
+}
+
+/* Enlace de la tarjeta de artista. */
+.artista-expo-texto a {
+  color: var(--blanco-roto);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* Hover del enlace de artista. */
+.artista-expo-texto a:hover {
+  color: var(--azul-piscina);
+}
+
+/* Newsletter */
+
+/* Sección de newsletter común para varias páginas. */
+.newsletter-real {
+  background-color: var(--blanco-roto);
+  color: var(--azul-noche);
+  padding: 64px 0;
+}
+
+/* Contenedor del formulario de newsletter. */
+.newsletter-contenido {
+  max-width: 760px;
+}
+
+/* Formulario de newsletter. */
+.newsletter-form {
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* Grupo de campo dentro de los formularios. */
+.form-grupo {
+  margin-bottom: 20px;
+}
+
+/* Etiquetas de los campos del formulario. */
+.form-grupo label {
+  display: block;
+  margin-bottom: 8px;
+  font-family: var(--mono);
+  font-size: 12px;
+}
+
+/* Estilo de inputs, textarea y select. */
+.form-grupo input,
+.form-grupo textarea,
+.form-grupo select {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid rgba(17, 24, 39, 0.35);
+  background-color: transparent;
+  padding: 10px 0;
+  color: var(--azul-noche);
+  border-radius: 0;
+}
+
+/* Campo de email con símbolo @ delante. */
+.email-campo {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(17, 24, 39, 0.35);
+}
+
+/* Símbolo @ del campo de email. */
+.email-campo span {
+  margin-right: 8px;
+  font-weight: 700;
+  color: var(--verde);
+}
+
+/* Quita el borde duplicado al input dentro de email-campo. */
+.email-campo input {
+  border-bottom: 0;
+}
+
+/* Checkbox y texto legal del formulario. */
+.form-check {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  margin: 18px 0;
+  font-size: 13px;
+}
+
+/* Mensajes de error de los formularios. */
+.form-error {
+  min-height: 18px;
+  margin: 6px 0 0;
+  color: var(--coral);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* Modal formulario */
+
+/* Fondo oscuro del modal de confirmación. */
+.modal-formulario {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(17, 24, 39, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 30;
+}
+
+/* Oculta el modal cuando tiene el atributo hidden. */
+.modal-formulario[hidden] {
+  display: none;
+}
+
+/* Caja interior del modal. */
+.modal-caja {
+  background-color: var(--blanco-roto);
+  color: var(--azul-noche);
+  padding: 32px;
+  width: 90%;
+  max-width: 360px;
+  text-align: center;
+  border: 2px solid var(--azul-noche);
+}
+
+/* Título del modal. */
+.modal-caja h2 {
+  margin-top: 0;
+  font-family: var(--titulo);
+}
+
+/* Comunidad */
+
+/* Hero de la página Comunidad. */
+.hero-comunidad {
+  background-color: var(--azul-noche);
+  color: var(--blanco-roto);
+  padding: 64px 0 72px;
+  text-align: center;
+}
+
+/* Contenedor del hero de Comunidad. */
+.hero-comunidad-contenido {
+  max-width: 1240px;
+}
+
+/* Título principal de Comunidad. */
+.hero-comunidad h1 {
+  margin: 0 0 18px;
+  font-family: var(--titulo);
+  font-size: 44px;
+  line-height: 1.05;
+}
+
+/* Texto del hero de Comunidad. */
+.hero-comunidad p {
+  max-width: 620px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Imagen grande del hero de Comunidad. */
+.hero-comunidad img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  object-position: center 22%;
+  margin-top: 42px;
+}
+
+/* Sección de encuentro creativo. */
+.encuentro-comunidad {
+  background-color: var(--verde);
+  color: var(--blanco-roto);
+  padding: 64px 0;
+}
+
+/* Contenido de la sección encuentro. */
+.encuentro-contenido {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Etiqueta de la sección encuentro. */
+.encuentro-comunidad .etiqueta-seccion {
+  color: var(--blanco-roto);
+  text-transform: none;
+  letter-spacing: 0;
+  font-family: var(--texto);
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 22px;
+}
+
+/* Título de encuentro. */
+.encuentro-contenido h2 {
+  margin: 0 0 28px;
+  font-family: var(--titulo);
+  font-size: 54px;
+  line-height: 1.08;
+}
+
+/* Texto de encuentro. */
+.encuentro-contenido p {
+  max-width: 720px;
+  margin: 0 0 28px;
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+/* Botones de la sección encuentro. */
+.encuentro-botones {
+  margin-top: 24px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Secciones de talleres y proyectos compartidos. */
+.talleres-comunidad,
+.proyectos-comunidad {
+  background-color: var(--blanco-roto);
+  padding: 64px 0;
+}
+
+/* Rejillas de talleres y proyectos. */
+.talleres-grid,
+.proyectos-grid {
+  display: grid;
+  gap: 24px;
+}
+
+/* Tarjetas de comunidad y proyectos. */
+.comunidad-card,
+.proyecto-card {
+  background-color: #c9c3ba;
+  overflow: hidden;
+}
+
+/* Imágenes de tarjetas de comunidad y proyectos. */
+.comunidad-card img,
+.proyecto-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Texto interior de las tarjetas. */
+.comunidad-card-texto,
+.proyecto-texto {
+  padding: 22px;
+}
+
+/* Categoría pequeña de comunidad. */
+.comunidad-categoria {
+  margin: 0 0 8px;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--verde);
+}
+
+/* Títulos de tarjetas de comunidad, proyectos y charlas. */
+.comunidad-card h3,
+.proyecto-card h3,
+.charla-card h3 {
+  margin: 0 0 10px;
+  font-family: var(--titulo);
+  font-size: 25px;
+  line-height: 1.05;
+}
+
+/* Textos de tarjetas. */
+.comunidad-card p,
+.proyecto-card p,
+.charla-card p {
+  line-height: 1.5;
+}
+
+/* Enlaces de tarjetas de comunidad y proyectos. */
+.comunidad-card a,
+.proyecto-card a {
+  display: inline-block;
+  margin-top: 8px;
+  color: var(--verde);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Hover de enlaces de comunidad y proyectos. */
+.comunidad-card a:hover,
+.proyecto-card a:hover {
+  color: var(--azul-piscina);
+}
+
+/* Sección de charlas. */
+.charlas-comunidad {
+  background-color: var(--verde);
+  color: var(--blanco-roto);
+  padding: 64px 0;
+}
+
+/* Rejilla de charlas. */
+.charlas-grid {
+  display: grid;
+  gap: 20px;
+}
+
+/* Tarjeta de charla. */
+.charla-card {
+  background-color: rgba(17, 24, 39, 0.25);
+  border: 1px solid rgba(245, 241, 232, 0.16);
+  padding: 24px;
+}
+
+/* Icono de charla. */
+.charla-card img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+/* Enlace de charla. */
+.charla-card a {
+  display: inline-block;
+  margin-top: 8px;
+  color: var(--blanco-roto);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Hover del enlace de charla. */
+.charla-card a:hover {
+  color: var(--azul-piscina);
+}
+
+/* Sección del formulario de propuesta. */
+.propuesta-comunidad {
+  background-color: #ffffff;
+  color: var(--azul-noche);
+  padding: 64px 0;
+}
+
+/* Rejilla de información y formulario de propuesta. */
+.propuesta-grid {
+  display: grid;
+  gap: 44px;
+}
+
+/* Título del bloque de propuesta. */
+.propuesta-info h2 {
+  margin: 0 0 18px;
+  font-family: var(--titulo);
+  font-size: 36px;
+  line-height: 1.05;
+}
+
+/* Texto del bloque de propuesta. */
+.propuesta-info p {
+  line-height: 1.6;
+}
+
+/* Lista de datos de contacto. */
+.propuesta-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 28px 0 0;
+}
+
+/* Separación de los datos de contacto. */
+.propuesta-info li {
+  margin-bottom: 12px;
+}
+
+/* Enlaces de contacto. */
+.propuesta-info a {
+  text-decoration: none;
+}
+
+/* Hover de enlaces de contacto. */
+.propuesta-info a:hover {
+  color: var(--verde);
+}
+
+/* Select del formulario de propuesta. */
+.formulario-propuesta select {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid rgba(17, 24, 39, 0.35);
+  background-color: transparent;
+  padding: 10px 0;
+  color: var(--azul-noche);
+  border-radius: 0;
+}
+
+/* Grupo de checks del formulario de propuesta. */
+.checks-propuesta {
+  border: 0;
+  padding: 0;
+  margin: 0 0 20px;
+  display: grid;
+  gap: 10px;
+}
+
+/* Leyenda del grupo de checks. */
+.checks-propuesta legend {
+  margin-bottom: 10px;
+  font-family: var(--mono);
+  font-size: 12px;
+}
+
+/* Texto de cada checkbox. */
+.checks-propuesta label {
+  font-size: 14px;
+}
+
+/* Footer */
+
+/* Pie de página general. */
+.site-footer {
+  background-color: var(--azul-noche);
+  color: var(--blanco-roto);
+  padding: 44px 0 24px;
+  font-size: 14px;
+}
+
+/* Organiza las columnas del footer. */
+.footer-content {
+  display: grid;
+  gap: 30px;
+}
+
+/* Logo del footer. */
+.footer-logo {
+  width: 155px;
+  margin-bottom: 16px;
+  margin-left: -8px;
+}
+
+/* Texto de la marca en el footer. */
+.footer-brand p {
+  max-width: 340px;
+  line-height: 1.45;
+  margin-top: 0;
+  font-size: 14px;
+}
+
+/* Nota pequeña del footer. */
+.footer-note {
+  font-size: 12px;
+  color: rgba(245, 241, 232, 0.75);
+  margin-top: 10px;
+  line-height: 1.4;
+}
+
+/* Títulos de los bloques del footer. */
+.footer-block h2 {
+  margin: 0 0 14px;
+  font-family: var(--texto);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* Listas del footer sin puntos. */
+.footer-block ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Separación de enlaces del footer. */
+.footer-block li {
+  margin-bottom: 9px;
+}
+
+/* Enlaces del footer. */
+.footer-block a {
+  color: var(--blanco-roto);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* Hover de enlaces del footer. */
+.footer-block a:hover {
+  color: var(--azul-piscina);
+}
+
+/* Enlaces sociales del footer con icono y texto. */
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+}
+
+/* Iconos sociales del footer. */
+.footer-social img {
+  width: 16px;
+  height: 16px;
+}
+
+/* Parte inferior del footer con copyright y enlaces legales. */
+.footer-bottom {
+  border-top: 1px solid rgba(245, 241, 232, 0.25);
+  margin-top: 34px;
+  padding-top: 18px;
+  font-size: 12px;
+  display: grid;
+  gap: 14px;
+}
+
+/* Texto de copyright. */
+.footer-bottom p {
+  margin: 0;
+}
+
+/* Enlaces legales inferiores. */
+.footer-legal-links {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+/* Estilo de enlaces legales inferiores. */
+.footer-legal-links a {
+  color: var(--blanco-roto);
+  font-size: 12px;
+}
+
+/* Hover de enlaces legales inferiores. */
+.footer-legal-links a:hover {
+  color: var(--azul-piscina);
+}
+
+/* Móvil */
+
+/* Ajustes para pantallas pequeñas. */
+@media (max-width: 960px) {
+  /* Reduce el logo en móvil. */
+  .logo {
+    width: 120px;
+  }
+
+  /* Muestra el botón de entradas en la cabecera móvil. */
+  .header-button {
+    display: inline-block;
+    padding: 7px 12px;
+    font-size: 12px;
+  }
+
+  /* Coloca el menú móvil como una caja desplegable. */
+  .main-nav {
+    left: auto;
+    right: 0;
+    top: 60px;
+    width: 260px;
+    max-width: calc(100vw - 32px);
+    padding: 24px 28px;
+    border: 1px solid rgba(17, 24, 39, 0.18);
+    box-shadow: 0 8px 20px rgba(17, 24, 39, 0.12);
+  }
+
+  /* Más separación entre enlaces del menú móvil. */
+  .main-nav li {
+    margin-bottom: 16px;
+  }
+
+  /* Quita margen al último elemento del menú. */
+  .main-nav li:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Tamaño de los enlaces del menú móvil. */
+  .main-nav a {
+    font-size: 16px;
+    line-height: 1.3;
+  }
+
+  /* Aumenta la altura de los hero en móvil. */
+  .hero-inicio,
+  .hero-sobre,
+  .hero-exposicion,
+  .hero-capa {
+    min-height: 470px;
+  }
+
+  /* Reduce el tamaño del título del hero en móvil. */
+  .hero-contenido h1 {
+    font-size: 36px;
+  }
+
+  /* Reduce iconos en móvil. */
+  .galeria-icono,
+  .interaccion-card img,
+  .charla-card img {
+    width: 42px;
+    height: 42px;
+  }
+
+  /* Ajusta el título de encuentro en móvil. */
+  .encuentro-contenido h2 {
+    font-size: 44px;
+  }
+
+  /* Ajusta el texto de encuentro en móvil. */
+  .encuentro-contenido p {
+    font-size: 16px;
+  }
+
+  /* Añade margen lateral al footer en móvil. */
+  .site-footer {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  /* Añade un poco de aire dentro de los bloques del footer. */
+  .footer-brand,
+  .footer-block {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+/* Escritorio */
+
+/* Ajustes para tablet y escritorio. */
+@media (min-width: 961px) {
+  /* Aumenta la altura de la cabecera. */
+  .header-content {
+    min-height: 64px;
+  }
+
+  /* Aumenta el tamaño del logo en escritorio. */
+  .logo {
+    width: 170px;
+  }
+
+  /* Oculta el botón de menú porque en escritorio se ve el menú completo. */
+  .menu-toggle {
+    display: none;
+  }
+
+  /* Muestra el menú en línea en escritorio. */
+  .main-nav {
+    display: block;
+    position: static;
+    width: auto;
+    padding: 0;
+    border-bottom: 0;
+    background-color: transparent;
+  }
+
+  /* Coloca los enlaces del menú en fila. */
+  .main-nav ul {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+  }
+
+  /* Quita el margen vertical de los enlaces en escritorio. */
+  .main-nav li {
+    margin-bottom: 0;
+  }
+
+  /* Tamaño del texto del menú en escritorio. */
+  .main-nav a {
+    font-size: 13px;
+  }
+
+  /* Oculta el enlace de entradas dentro del menú porque ya está como botón. */
+  .nav-entradas {
+    display: none;
+  }
+
+  /* Muestra el botón de entradas en escritorio. */
+  .header-button {
+    display: inline-block;
+  }
+
+  /* Aumenta la altura de los hero en escritorio. */
+  .hero-inicio,
+  .hero-sobre,
+  .hero-exposicion,
+  .hero-capa {
+    min-height: 560px;
+  }
+
+  /* Título grande del hero en escritorio. */
+  .hero-contenido h1 {
+    font-size: 64px;
+  }
+
+  /* Coloca los botones del hero en fila. */
+  .hero-botones {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  /* Aumenta el espacio vertical de las secciones principales. */
+  .descripcion-real,
+  .obras-real,
+  .artistas-real,
+  .newsletter-real,
+  .historia-sobre,
+  .organizadores-sobre,
+  .arte-generativo,
+  .galeria-interactiva,
+  .interactuar-obras,
+  .obras-exposicion,
+  .artistas-exposicion {
+    padding: 88px 0;
+  }
+
+  /* Más espacio vertical en la capa del concepto. */
+  .concepto-capa {
+    padding: 96px 0;
+  }
+
+  /* Aumenta los títulos de varias secciones en escritorio. */
+  .titulo-seccion h2,
+  .descripcion-real h2,
+  .historia-contenido h2,
+  .concepto-contenido h2 {
+    font-size: 46px;
+  }
+
+  /* Coloca enlaces de descripción en fila. */
+  .descripcion-enlaces {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  /* Rejillas de tres columnas en escritorio. */
+  .obras-grid,
+  .artistas-grid,
+  .interaccion-grid,
+  .obras-expo-grid,
+  .artistas-expo-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Imágenes de obras un poco más altas en escritorio. */
+  .obra-card img {
+    height: 240px;
+  }
+
+  /* Imágenes de artistas de inicio más altas en escritorio. */
+  .artista-card > img {
+    height: 330px;
+  }
+
+  /* Imagen de historia más alta en escritorio. */
+  .historia-contenido img {
+    height: 420px;
+  }
+
+  /* Organizadores en dos columnas en escritorio. */
+  .organizadores-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+  }
+
+  /* Patrocinadores en tres columnas en escritorio. */
+  .patro-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 42px 80px;
+  }
+
+  /* Título de arte generativo más grande. */
+  .arte-generativo h2 {
+    font-size: 56px;
+  }
+
+  /* Galería con texto e imagen en dos columnas. */
+  .galeria-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+
+  /* Título de galería más grande. */
+  .galeria-texto h2 {
+    font-size: 42px;
+  }
+
+  /* Imagen de galería más alta. */
+  .galeria-imagen img {
+    height: 360px;
+  }
+
+  /* Imagen de obras de exposición. */
+  .obra-expo-card img {
+    height: 210px;
+  }
+
+  /* Imagen de artistas de exposición. */
+  .artista-expo-card img {
+    height: 260px;
+  }
+
+  /* Más espacio en el hero de Comunidad. */
+  .hero-comunidad {
+    padding: 88px 0 78px;
+  }
+
+  /* Título grande de Comunidad. */
+  .hero-comunidad h1 {
+    font-size: 72px;
+  }
+
+  /* Imagen grande de Comunidad. */
+  .hero-comunidad img {
+    height: 500px;
+    object-position: center 24%;
+    margin-top: 54px;
+  }
+
+  /* Espaciado de la sección encuentro. */
+  .encuentro-comunidad {
+    padding: 74px 0;
+  }
+
+  /* Ancho máximo de encuentro. */
+  .encuentro-contenido {
+    max-width: 780px;
+  }
+
+  /* Título grande de encuentro. */
+  .encuentro-contenido h2 {
+    font-size: 72px;
+    line-height: 1.06;
+  }
+
+  /* Texto de encuentro más grande. */
+  .encuentro-contenido p {
+    font-size: 20px;
+  }
+
+  /* Aumenta el espacio vertical de secciones de comunidad. */
+  .talleres-comunidad,
+  .charlas-comunidad,
+  .proyectos-comunidad,
+  .propuesta-comunidad {
+    padding: 88px 0;
+  }
+
+  /* Título de propuesta más grande. */
+  .propuesta-info h2 {
+    font-size: 54px;
+  }
+
+  /* Talleres en tres columnas, con la última más ancha. */
+  .talleres-grid {
+    grid-template-columns: 1fr 1fr 2fr;
+    align-items: stretch;
+  }
+
+  /* Tarjeta horizontal para un taller destacado. */
+  .comunidad-card-horizontal {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    align-items: stretch;
+  }
+
+  /* Imagen de la tarjeta horizontal. */
+  .comunidad-card-horizontal img {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  /* Hace que el texto de la tarjeta horizontal ocupe toda la altura. */
+  .comunidad-card-horizontal .comunidad-card-texto {
+    height: 100%;
+  }
+
+  /* Charlas en tres columnas. */
+  .charlas-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Altura mínima de las tarjetas de charla. */
+  .charla-card {
+    min-height: 270px;
+    padding: 32px;
+  }
+
+  /* Proyectos en tres columnas con una tarjeta destacada. */
+  .proyectos-grid {
+    grid-template-columns: 2fr 1fr 1fr;
+    align-items: stretch;
+  }
+
+  /* Proyecto destacado con texto e imagen en dos columnas. */
+  .proyecto-destacado {
+    display: grid;
+    grid-template-columns: 1fr 1.35fr;
+    align-items: stretch;
+  }
+
+  /* Imagen del proyecto destacado. */
+  .proyecto-destacado img {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  /* Texto del proyecto destacado ocupando toda la altura. */
+  .proyecto-destacado .proyecto-texto {
+    height: 100%;
+  }
+
+  /* Imagen de proyectos pequeños. */
+  .proyecto-card img {
+    height: 180px;
+  }
+
+  /* Formulario de propuesta en dos columnas. */
+  .propuesta-grid {
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 90px;
+    align-items: start;
+  }
+
+  /* Campos dobles del formulario en dos columnas. */
+  .form-doble {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 34px;
+  }
+
+  /* Checkboxes del formulario en dos columnas. */
+  .checks-propuesta {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* La leyenda de los checks ocupa todo el ancho. */
+  .checks-propuesta legend {
+    grid-column: 1 / -1;
+  }
+
+  /* Footer en columnas en escritorio. */
+  .footer-content {
+    grid-template-columns: 1.8fr 0.8fr 0.8fr 0.9fr;
+    align-items: start;
+  }
+
+  /* Parte inferior del footer en dos columnas. */
+  .footer-bottom {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+
+  /* Enlaces legales del footer en fila. */
+  .footer-legal-links {
+    flex-direction: row;
+    gap: 24px;
+  }
+}
+
+/* Ajuste del menú para pantallas grandes. */
+@media (min-width: 1100px) {
+  /* Aumenta un poco la separación entre enlaces del menú. */
+  .main-nav ul {
+    gap: 20px;
+  }
+}
+
+/* Página construcción */
+
+/* Sección principal de la página en construcción. */
+.pagina-construccion {
+  background-color: var(--blanco-roto);
+  padding: 90px 0;
+}
+
+/* Caja central de la página en construcción. */
+.caja-construccion {
+  min-height: 380px;
+  background-color: var(--verde);
+  color: var(--blanco-roto);
+  padding: 56px 48px;
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 48px;
+  align-items: center;
+}
+
+/* Texto de la página en construcción. */
+.construccion-texto {
+  max-width: 560px;
+}
+
+/* Etiqueta pequeña de la página en construcción. */
+.etiqueta-construccion {
+  margin: 0 0 18px;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--azul-piscina);
+}
+
+/* Título de la página en construcción. */
+.construccion-texto h1 {
+  margin: 0 0 22px;
+  font-family: var(--titulo);
+  font-size: 56px;
+  line-height: 1.05;
+}
+
+/* Texto descriptivo de la página en construcción. */
+.construccion-texto p {
+  margin: 0 0 30px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Contenedor de la imagen de construcción. */
+.construccion-imagen {
+  width: 100%;
+}
+
+/* Imagen de la página en construcción. */
+.construccion-imagen img {
+  width: 100%;
+  height: 230px;
+  display: block;
+  object-fit: cover;
+  box-shadow: 0 14px 30px rgba(17, 24, 39, 0.25);
+}
+
+/* Botón claro de la página en construcción. */
+.button-construccion {
+  background-color: var(--blanco-roto);
+  border-color: var(--blanco-roto);
+  color: var(--azul-noche);
+}
+
+/* Hover del botón de construcción. */
+.button-construccion:hover {
+  background-color: var(--azul-piscina);
+  border-color: var(--azul-piscina);
+  color: var(--azul-noche);
+}
+
+/* Ajustes móviles de la página en construcción. */
+@media (max-width: 767px) {
+  /* Reduce el espacio superior e inferior. */
+  .pagina-construccion {
+    padding: 56px 0;
+  }
+
+  /* La caja pasa a una sola columna en móvil. */
+  .caja-construccion {
+    min-height: 320px;
+    padding: 42px 28px;
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  /* Reduce el título en móvil. */
+  .construccion-texto h1 {
+    font-size: 40px;
+  }
+
+  /* Reduce el texto en móvil. */
+  .construccion-texto p {
+    font-size: 16px;
+  }
+
+  /* Ajusta la altura de la imagen en móvil. */
+  .construccion-imagen img {
+    height: 210px;
+  }
+}

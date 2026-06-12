@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Configuración básica del documento -->
+  <meta charset="UTF-8">
+
+  <!-- Hace que la página se adapte a móviles y otros tamaños de pantalla -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Título que aparece en la pestaña del navegador -->
+  <title>Canvas &amp; Code | Comunidad</title>
+
+  <!-- Descripción breve de la página para buscadores -->
+  <meta name="description" content="Comunidad de Canvas &amp; Code: talleres, charlas, proyectos compartidos y propuestas creativas relacionadas con el arte generativo.">
+
+  <!-- Conexión con Google Fonts para cargar las tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Tipografías usadas en la web -->
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600;700&amp;family=Nunito:wght@400;500;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+
+  <!-- Icono de la pestaña del navegador -->
+  <link rel="icon" href="logo/icono.png" type="image/png">
+
+  <!-- Archivo CSS principal -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Enlace de accesibilidad para saltar directamente al contenido principal -->
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <!-- Cabecera de la página -->
+  <header class="site-header">
+    <div class="container header-content">
+
+      <!-- Logo de la web con enlace al inicio -->
+      <a class="logo-link" href="index.html" aria-label="Ir al inicio de Canvas &amp; Code">
+        <img class="logo" src="logo/LogoHorizontal.png" alt="Canvas &amp; Code">
+      </a>
+
+      <!-- Botón para abrir y cerrar el menú en móvil -->
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        Menú
+      </button>
+
+      <!-- Menú principal de navegación -->
+      <nav class="main-nav" id="menu-principal" aria-label="Navegación principal">
+        <ul>
+          <!-- Enlaces principales de la web -->
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="exposicion.html">Galería</a></li>
+          <li><a href="exposicion.html#artistas">Artistas</a></li>
+          <li><a href="comunidad.html#talleres">Programa</a></li>
+          <li><a href="sobre.html">Sobre el festival</a></li>
+
+          <!-- Enlace activo porque esta es la página Comunidad -->
+          <li><a class="active" href="comunidad.html" aria-current="page">Comunidad</a></li>
+
+          <li><a href="construccion.html">Contacto</a></li>
+
+          <!-- Enlace de entradas dentro del menú móvil -->
+          <li class="nav-entradas"><a href="construccion.html">Entradas</a></li>
+        </ul>
+      </nav>
+
+      <!-- Botón de entradas visible en la cabecera -->
+      <a class="header-button" href="construccion.html">Entradas</a>
+
+    </div>
+  </header>
+
+  <!-- Contenido principal de la página -->
+  <main id="contenido">
+
+    <!-- Sección principal de presentación de Comunidad -->
+    <section class="hero-comunidad">
+      <div class="container hero-comunidad-contenido">
+
+        <!-- Etiqueta pequeña de la sección -->
+        <p class="etiqueta-seccion">Participa</p>
+
+        <!-- Título principal de la página -->
+        <h1>Comunidad</h1>
+
+        <!-- Texto introductorio de la comunidad -->
+        <p>
+          Un espacio para conectar con personas interesadas en el arte generativo,
+          la programación creativa y la cultura digital. Aquí el festival continúa
+          más allá de la exposición.
+        </p>
+
+        <!-- Botones principales del hero -->
+        <div class="hero-botones">
+          <a class="button button-hero-claro" href="#propuesta">Unirse</a>
+          <a class="button button-hero-oscuro" href="#talleres">Explorar</a>
+        </div>
+
+        <!-- Imagen principal de la página Comunidad -->
+        <img src="img/Comunidad/Artista_generativa.png" alt="Ilustración de una artista generativa trabajando con una tableta digital">
+
+      </div>
+    </section>
+
+    <!-- Sección de presentación del encuentro creativo -->
+    <section class="encuentro-comunidad">
+      <div class="container encuentro-contenido">
+
+        <!-- Etiqueta pequeña de la sección -->
+        <p class="etiqueta-seccion etiqueta-encuentro">Encuentro</p>
+
+        <!-- Título de la sección -->
+        <h2>Un punto de encuentro creativo</h2>
+
+        <!-- Texto breve de la sección -->
+        <p>
+          La comunidad reúne artistas, diseñadores, programadores y curiosos.
+        </p>
+
+        <!-- Botones de la sección encuentro -->
+        <div class="encuentro-botones">
+          <a class="button button-encuentro-claro" href="#propuesta">Participar</a>
+          <a class="button button-encuentro-oscuro" href="#talleres">Explorar</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Sección de talleres prácticos -->
+    <section class="talleres-comunidad" id="talleres">
+      <div class="container">
+
+        <!-- Encabezado de la sección de talleres -->
+        <div class="titulo-seccion">
+          <p class="etiqueta-seccion etiqueta-oscura">Aprender</p>
+
+          <h2>Talleres prácticos</h2>
+
+          <p>
+            Actividades para aprender haciendo sin necesidad de base técnica.
+          </p>
+        </div>
+
+        <!-- Rejilla con las tarjetas de talleres -->
+        <div class="talleres-grid">
+
+          <!-- Primera tarjeta de taller -->
+          <article class="comunidad-card">
+            <img src="img/Comunidad/Estructura_codificada.png" alt="Pantalla con código creativo">
+
+            <div class="comunidad-card-texto">
+              <p class="comunidad-categoria">Taller</p>
+
+              <h3>Primeros pasos con p5.js</h3>
+
+              <p>
+                Introducción visual para programar y crear piezas interactivas.
+              </p>
+
+              <a href="#propuesta">Ver &gt;</a>
+            </div>
+          </article>
+
+          <!-- Segunda tarjeta de taller -->
+          <article class="comunidad-card">
+            <img src="img/Comunidad/Lluvia_codigo.png" alt="Lluvia de código verde sobre fondo oscuro">
+
+            <div class="comunidad-card-texto">
+              <p class="comunidad-categoria">Taller</p>
+
+              <h3>Crear patrones generativos</h3>
+
+              <p>
+                Composiciones visuales mediante reglas, repetición y variación.
+              </p>
+
+              <a href="#propuesta">Ver &gt;</a>
+            </div>
+          </article>
+
+          <!-- Tercera tarjeta de taller, con formato horizontal en escritorio -->
+          <article class="comunidad-card comunidad-card-horizontal">
+            <img src="img/Comunidad/Interfaz_translucida.png" alt="Detalle de una interfaz translúcida con formas generativas">
+
+            <div class="comunidad-card-texto">
+              <p class="comunidad-categoria">Taller</p>
+
+              <h3>Inteligencia artificial aplicada a la imagen</h3>
+
+              <p>
+                Exploración artística de la IA en procesos de creación visual.
+              </p>
+
+              <a href="#propuesta">Ver &gt;</a>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Sección de charlas y encuentros -->
+    <section class="charlas-comunidad">
+      <div class="container">
+
+        <!-- Encabezado de la sección de charlas -->
+        <div class="titulo-seccion titulo-claro">
+          <p class="etiqueta-seccion">Diálogo</p>
+
+          <h2>Charlas y encuentros</h2>
+
+          <p>
+            Conversaciones con artistas y profesionales sobre arte, tecnología y sociedad.
+          </p>
+        </div>
+
+        <!-- Rejilla con las tarjetas de charlas -->
+        <div class="charlas-grid">
+
+          <!-- Primera charla -->
+          <article class="charla-card">
+            <img src="icons/Obra.png" alt="">
+
+            <h3>Cuando el código también dibuja</h3>
+
+            <p>
+              Voces sobre creación algorítmica y nuevas maneras de imaginar.
+            </p>
+
+            <a href="#propuesta">Ver &gt;</a>
+          </article>
+
+          <!-- Segunda charla -->
+          <article class="charla-card">
+            <img src="icons/IA_artistica.png" alt="">
+
+            <h3>Inteligencia artificial y mirada artística</h3>
+
+            <p>
+              Debate sobre los usos de IA en procesos visuales actuales.
+            </p>
+
+            <a href="#propuesta">Ver &gt;</a>
+          </article>
+
+          <!-- Tercera charla -->
+          <article class="charla-card">
+            <img src="icons/Interaccion.png" alt="">
+
+            <h3>Interacción y experiencia digital</h3>
+
+            <p>
+              La visita participativa como forma de ampliar la experiencia.
+            </p>
+
+            <a href="#propuesta">Escuchar &gt;</a>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Sección de proyectos compartidos -->
+    <section class="proyectos-comunidad">
+      <div class="container">
+
+        <!-- Encabezado de la sección de proyectos -->
+        <div class="titulo-seccion">
+          <p class="etiqueta-seccion etiqueta-oscura">Muestra</p>
+
+          <h2>Proyectos compartidos</h2>
+
+          <p>
+            Propuestas creadas por participantes del festival y la comunidad.
+          </p>
+        </div>
+
+        <!-- Rejilla con las tarjetas de proyectos -->
+        <div class="proyectos-grid">
+
+          <!-- Proyecto destacado -->
+          <article class="proyecto-card proyecto-destacado">
+            <div class="proyecto-texto">
+              <p class="comunidad-categoria">Proyecto</p>
+
+              <h3>Mapa de luz</h3>
+
+              <p>
+                Obra interactiva creada con sensores, datos urbanos y cuerpos en movimiento.
+              </p>
+
+              <a href="construccion.html">Ver &gt;</a>
+            </div>
+
+            <img src="img/Comunidad/Instalacion_luminica.png" alt="Instalación artística luminosa con forma circular">
+          </article>
+
+          <!-- Segundo proyecto -->
+          <article class="proyecto-card">
+            <div class="proyecto-texto">
+              <p class="comunidad-categoria">Proyecto</p>
+
+              <h3>Pulso digital</h3>
+
+              <p>
+                Visualización sonora creada a partir de impulsos y movimiento.
+              </p>
+
+              <a href="construccion.html">Ver &gt;</a>
+            </div>
+
+            <img src="img/Comunidad/Nodos_orbitas.png" alt="Visualización digital con nodos y órbitas">
+          </article>
+
+          <!-- Tercer proyecto -->
+          <article class="proyecto-card">
+            <div class="proyecto-texto">
+              <p class="comunidad-categoria">Proyecto</p>
+
+              <h3>Archivo de formas</h3>
+
+              <p>
+                Una serie de patrones generativos con reglas simples.
+              </p>
+
+              <a href="construccion.html">Ver &gt;</a>
+            </div>
+
+            <img src="img/Comunidad/Collage.png" alt="Collage de formas generativas">
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Sección para enviar una propuesta a la comunidad -->
+    <section class="propuesta-comunidad" id="propuesta">
+      <div class="container propuesta-grid">
+
+        <!-- Información de contacto y explicación de la propuesta -->
+        <div class="propuesta-info">
+          <p class="etiqueta-seccion etiqueta-oscura">Propuesta</p>
+
+          <h2>Envía tu propuesta</h2>
+
+          <p>
+            Comparte tu obra, taller o idea con la comunidad creativa.
+          </p>
+
+          <!-- Datos de contacto -->
+          <ul>
+            <li><a href="mailto:contacto@canvascode.com">contacto@canvascode.com</a></li>
+            <li><a href="tel:+34123456789">+34 123 456 789</a></li>
+            <li>Madrid, España</li>
+          </ul>
+        </div>
+
+        <!-- Formulario para enviar una propuesta -->
+        <form class="formulario-propuesta" id="formulario-propuesta" action="#" method="post" novalidate>
+
+          <!-- Primera fila de campos: nombre y apellidos -->
+          <div class="form-doble">
+            <div class="form-grupo">
+              <label for="nombre-propuesta">Nombre</label>
+              <input id="nombre-propuesta" type="text" name="nombre">
+              <p class="form-error" id="error-nombre-propuesta"></p>
+            </div>
+
+            <div class="form-grupo">
+              <label for="apellidos-propuesta">Apellidos</label>
+              <input id="apellidos-propuesta" type="text" name="apellidos">
+              <p class="form-error" id="error-apellidos-propuesta"></p>
+            </div>
+          </div>
+
+          <!-- Segunda fila de campos: correo y teléfono -->
+          <div class="form-doble">
+            <div class="form-grupo">
+              <label for="correo-propuesta">Correo</label>
+              <input id="correo-propuesta" type="email" name="correo">
+              <p class="form-error" id="error-correo-propuesta"></p>
+            </div>
+
+            <div class="form-grupo">
+              <label for="telefono-propuesta">Teléfono</label>
+              <input id="telefono-propuesta" type="tel" name="telefono">
+              <p class="form-error" id="error-telefono-propuesta"></p>
+            </div>
+          </div>
+
+          <!-- Selector del tipo de propuesta -->
+          <div class="form-grupo">
+            <label for="tipo-propuesta">Tipo de propuesta</label>
+
+            <select id="tipo-propuesta" name="tipo">
+              <option value="">Selecciona una opción</option>
+              <option>Obra artística</option>
+              <option>Taller</option>
+              <option>Charla</option>
+              <option>Proyecto compartido</option>
+            </select>
+
+            <p class="form-error" id="error-tipo-propuesta"></p>
+          </div>
+
+          <!-- Grupo de checkboxes para describir el perfil del participante -->
+          <fieldset class="checks-propuesta">
+            <legend>¿Qué describe mejor tu trabajo?</legend>
+
+            <label>
+              <input type="checkbox" name="perfil" value="artista">
+              Artista visual
+            </label>
+
+            <label>
+              <input type="checkbox" name="perfil" value="programador">
+              Programador creativo
+            </label>
+
+            <label>
+              <input type="checkbox" name="perfil" value="disenador">
+              Diseñador digital
+            </label>
+
+            <label>
+              <input type="checkbox" name="perfil" value="estudiante">
+              Estudiante
+            </label>
+
+            <label>
+              <input type="checkbox" name="perfil" value="investigador">
+              Investigador/a
+            </label>
+
+            <label>
+              <input type="checkbox" name="perfil" value="otro">
+              Otro
+            </label>
+
+            <p class="form-error" id="error-perfil-propuesta"></p>
+          </fieldset>
+
+          <!-- Campo para escribir el mensaje o explicación de la propuesta -->
+          <div class="form-grupo">
+            <label for="mensaje-propuesta">Mensaje</label>
+            <textarea id="mensaje-propuesta" name="mensaje" rows="6" placeholder="Cuéntanos tu idea o proyecto"></textarea>
+            <p class="form-error" id="error-mensaje-propuesta"></p>
+          </div>
+
+          <!-- Checkbox para aceptar las condiciones legales -->
+          <label class="form-check">
+            <input id="legal-propuesta" type="checkbox" name="legal">
+            Acepto las condiciones legales del festival.
+          </label>
+
+          <!-- Mensaje de error del checkbox legal -->
+          <p class="form-error" id="error-legal-propuesta"></p>
+
+          <!-- Botón de envío del formulario de propuesta -->
+          <button class="button" id="boton-propuesta" type="submit" disabled>Enviar</button>
+
+        </form>
+
+      </div>
+    </section>
+
+    <!-- Sección de newsletter -->
+    <section class="newsletter-real">
+      <div class="container newsletter-contenido">
+
+        <!-- Encabezado de la newsletter -->
+        <div class="titulo-seccion">
+          <p class="etiqueta-seccion etiqueta-oscura">Newsletter</p>
+
+          <h2>Suscríbete a nuestra newsletter</h2>
+
+          <p>
+            Recibe novedades sobre talleres, charlas y actividades del festival.
+          </p>
+        </div>
+
+        <!-- Formulario de suscripción a la newsletter -->
+        <form class="newsletter-form" id="newsletter-form" action="#" method="post" novalidate>
+
+          <!-- Campo nombre -->
+          <div class="form-grupo">
+            <label for="nombre">Nombre</label>
+            <input id="nombre" type="text" name="newsletter-nombre">
+            <p class="form-error" id="error-nombre"></p>
+          </div>
+
+          <!-- Campo correo -->
+          <div class="form-grupo">
+            <label for="correo">Correo</label>
+            <input id="correo" type="email" name="newsletter-correo">
+            <p class="form-error" id="error-correo"></p>
+          </div>
+
+          <!-- Campo de mensaje o interés -->
+          <div class="form-grupo">
+            <label for="interes">Mensaje</label>
+            <textarea id="interes" name="newsletter-mensaje" rows="5" placeholder="Tu mensaje"></textarea>
+            <p class="form-error" id="error-interes"></p>
+          </div>
+
+          <!-- Checkbox para aceptar términos legales -->
+          <div class="form-check">
+            <input type="checkbox" id="acepto" name="newsletter-legal">
+            <label for="acepto">Acepto los términos legales.</label>
+          </div>
+
+          <!-- Mensaje de error del checkbox legal -->
+          <p class="form-error" id="error-acepto"></p>
+
+          <!-- Botón de envío de la newsletter -->
+          <div class="boton-centrado">
+            <button class="button" id="boton-enviar" type="submit" disabled>Suscríbete</button>
+          </div>
+
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Modal que aparece cuando un formulario se envía correctamente -->
+  <div class="modal-formulario" id="modal-formulario" hidden>
+    <div class="modal-caja" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+      <h2 id="modal-titulo">Formulario enviado</h2>
+      <p>Gracias. Hemos recibido tu información correctamente.</p>
+      <button class="button" id="cerrar-modal" type="button">OK</button>
+    </div>
+  </div>
+
+  <!-- Pie de página -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+
+      <!-- Bloque con logo y descripción breve -->
+      <div class="footer-brand">
+        <img class="footer-logo" src="logo/Logo_blanco_hori.png" alt="Canvas &amp; Code">
+
+        <p>
+          Mantente informado sobre obras, artistas y actividades.
+        </p>
+
+        <p class="footer-note">
+          Proyecto académico de festival digital sobre arte generativo y código creativo.
+        </p>
+      </div>
+
+      <!-- Bloque de navegación del footer -->
+      <div class="footer-block">
+        <h2>Navegación</h2>
+
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="exposicion.html">Galería</a></li>
+          <li><a href="exposicion.html#artistas">Artistas</a></li>
+          <li><a href="comunidad.html#talleres">Programa</a></li>
+          <li><a href="sobre.html">Sobre el festival</a></li>
+          <li><a href="comunidad.html" aria-current="page">Comunidad</a></li>
+          <li><a href="construccion.html">Contacto</a></li>
+        </ul>
+      </div>
+
+      <!-- Bloque de enlaces legales -->
+      <div class="footer-block">
+        <h2>Legal</h2>
+
+        <ul>
+          <li><a href="construccion.html">Privacidad</a></li>
+          <li><a href="construccion.html">Cookies</a></li>
+          <li><a href="construccion.html">Términos</a></li>
+          <li><a href="construccion.html">Configuración</a></li>
+          <li><a href="construccion.html">Redes</a></li>
+        </ul>
+      </div>
+
+      <!-- Bloque de redes sociales -->
+      <div class="footer-block footer-social">
+        <h2>Síguenos</h2>
+
+        <ul>
+          <li><a href="construccion.html"><img src="icons/Instagram.png" alt=""> Instagram</a></li>
+          <li><a href="construccion.html"><img src="icons/Facebook.png" alt=""> Facebook</a></li>
+          <li><a href="construccion.html"><img src="icons/LinkedIn.png" alt=""> LinkedIn</a></li>
+          <li><a href="construccion.html"><img src="icons/X.png" alt=""> X</a></li>
+          <li><a href="construccion.html"><img src="icons/YouTube.png" alt=""> YouTube</a></li>
+          <li><a href="construccion.html"><img src="icons/Dribbble.png" alt=""> Dribbble</a></li>
+          <li><a href="construccion.html"><img src="icons/TikTok.png" alt=""> TikTok</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Parte inferior del footer con copyright y enlaces legales -->
+    <div class="container footer-bottom">
+      <p>© 2026 Canvas &amp; Code. Todos los derechos reservados.</p>
+
+      <div class="footer-legal-links">
+        <a href="construccion.html">Política de privacidad</a>
+        <a href="construccion.html">Términos y condiciones</a>
+        <a href="construccion.html">Política de cookies</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Archivo JavaScript principal -->
+  <script src="js/script.js"></script>
+
+</body>
+</html>

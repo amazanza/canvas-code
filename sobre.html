@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Configuración básica del documento -->
+  <meta charset="UTF-8">
+
+  <!-- Hace que la página se adapte correctamente a móviles y otros tamaños de pantalla -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Título que aparece en la pestaña del navegador -->
+  <title>Canvas &amp; Code | Sobre el festival</title>
+
+  <!-- Descripción breve de la página para buscadores -->
+  <meta name="description" content="Página sobre el festival Canvas &amp; Code, su historia, concepto, organizadores y patrocinadores.">
+
+  <!-- Conexión con Google Fonts para cargar las tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Tipografías usadas en la web -->
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600;700&amp;family=Nunito:wght@400;500;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+
+  <!-- Icono de la pestaña del navegador -->
+  <link rel="icon" href="logo/icono.png" type="image/png">
+
+  <!-- Archivo CSS principal -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Enlace de accesibilidad para saltar directamente al contenido principal -->
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <!-- Cabecera de la página -->
+  <header class="site-header">
+    <div class="container header-content">
+
+      <!-- Logo de la web con enlace al inicio -->
+      <a class="logo-link" href="index.html" aria-label="Ir al inicio de Canvas &amp; Code">
+        <img class="logo" src="logo/LogoHorizontal.png" alt="Canvas &amp; Code">
+      </a>
+
+      <!-- Botón para abrir y cerrar el menú en móvil -->
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        Menú
+      </button>
+
+      <!-- Menú principal de navegación -->
+      <nav class="main-nav" id="menu-principal" aria-label="Navegación principal">
+        <ul>
+          <!-- Enlaces a las páginas principales de la web -->
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="exposicion.html">Galería</a></li>
+          <li><a href="exposicion.html#artistas">Artistas</a></li>
+          <li><a href="comunidad.html#talleres">Programa</a></li>
+
+          <!-- Enlace activo porque esta es la página Sobre el festival -->
+          <li><a class="active" href="sobre.html" aria-current="page">Sobre el festival</a></li>
+
+          <li><a href="comunidad.html">Comunidad</a></li>
+          <li><a href="construccion.html">Contacto</a></li>
+
+          <!-- Enlace de entradas dentro del menú móvil -->
+          <li class="nav-entradas"><a href="construccion.html">Entradas</a></li>
+        </ul>
+      </nav>
+
+      <!-- Botón de entradas visible en la cabecera -->
+      <a class="header-button" href="construccion.html">Entradas</a>
+
+    </div>
+  </header>
+
+  <!-- Contenido principal de la página -->
+  <main id="contenido">
+
+    <!-- Sección principal de presentación de la página Sobre -->
+    <section class="hero-sobre">
+
+      <!-- Imagen de fondo del hero -->
+      <img class="hero-imagen" src="img/Festival/Materia_fluida.png" alt="Imagen abstracta de materia fluida">
+
+      <!-- Capa oscura sobre la imagen para que el texto se lea mejor -->
+      <div class="hero-capa">
+        <div class="container hero-contenido">
+
+          <!-- Título principal de la página -->
+          <h1>Sobre el festival</h1>
+
+          <!-- Texto introductorio del festival -->
+          <p>
+            Canvas &amp; Code nace como un espacio donde el arte visual y el código convergen en un mismo proceso creativo.
+            El festival propone una experiencia digital donde las obras viven, cambian y se abren a la exploración del visitante.
+          </p>
+
+          <!-- Botones principales del hero -->
+          <div class="hero-botones">
+            <a class="button" href="exposicion.html">Explorar &gt;</a>
+            <a class="button" href="exposicion.html">Galería &gt;</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección que explica la historia del festival -->
+    <section class="historia-sobre">
+      <div class="container historia-contenido">
+
+        <!-- Título de la sección -->
+        <h2>Historia del festival</h2>
+
+        <!-- Texto de la historia del festival -->
+        <p>
+          Canvas &amp; Code nace como un espacio donde el arte visual y el código convergen en un mismo proceso creativo.
+          El festival propone una experiencia digital donde las obras viven, cambian y se abren a la exploración del visitante.
+        </p>
+
+        <!-- Botón que lleva a la página en construcción -->
+        <a class="button button-small" href="construccion.html">Leer &gt;</a>
+
+        <!-- Imagen decorativa de la sección historia -->
+        <img src="img/Festival/Rincón_artístico.png" alt="Rincón artístico con pinceles, materiales y piezas de trabajo">
+
+      </div>
+    </section>
+
+    <!-- Sección sobre el concepto del festival -->
+    <section class="concepto-sobre">
+
+      <!-- Capa interior para oscurecer el fondo y mejorar la lectura -->
+      <div class="concepto-capa">
+        <div class="container concepto-contenido">
+
+          <!-- Etiqueta pequeña de la sección -->
+          <p class="etiqueta-seccion">Visión</p>
+
+          <!-- Título de la sección -->
+          <h2>Concepto del festival</h2>
+
+          <!-- Explicación del concepto del festival -->
+          <p>
+            El festival entiende la programación como una herramienta artística.
+            El código no queda oculto detrás de la obra, sino que participa en su forma,
+            su movimiento y su capacidad de generar nuevas imágenes.
+          </p>
+
+          <!-- Enlace a una página en construcción -->
+          <a class="simple-link" href="construccion.html">Explorar &gt;</a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de organizadores del festival -->
+    <section class="organizadores-sobre">
+      <div class="container">
+
+        <!-- Encabezado de la sección de organizadores -->
+        <div class="titulo-seccion titulo-claro">
+          <p class="etiqueta-seccion">Equipo</p>
+
+          <h2>Organizadores</h2>
+
+          <p>
+            El proyecto está impulsado por un equipo vinculado al diseño multimedia,
+            la cultura digital y la programación creativa.
+          </p>
+        </div>
+
+        <!-- Rejilla con las tarjetas de organizadores -->
+        <div class="organizadores-grid">
+
+          <!-- Primer organizador -->
+          <article class="organizador-mini">
+            <img src="img/Festival/Marta_Isern.png" alt="Retrato de Marta Isern">
+
+            <h3>Marta Isern</h3>
+
+            <p class="organizador-cargo">Dirección artística</p>
+
+            <p>
+              Especializada en arte digital y proyectos expositivos online.
+            </p>
+
+            <!-- Enlaces a redes sociales de la organizadora -->
+            <div class="organizador-redes">
+              <a href="construccion.html" aria-label="LinkedIn de Marta Isern">
+                <img src="icons/LinkedIn.png" alt="">
+              </a>
+
+              <a href="construccion.html" aria-label="X de Marta Isern">
+                <img src="icons/X.png" alt="">
+              </a>
+
+              <a href="construccion.html" aria-label="Dribbble de Marta Isern">
+                <img src="icons/Dribbble.png" alt="">
+              </a>
+            </div>
+          </article>
+
+          <!-- Segundo organizador -->
+          <article class="organizador-mini">
+            <img src="img/Festival/Leo_Navarro.png" alt="Retrato de Leo Navarro">
+
+            <h3>Leo Navarro</h3>
+
+            <p class="organizador-cargo">Coordinación tecnológica</p>
+
+            <p>
+              Desarrollador creativo centrado en experiencias interactivas.
+            </p>
+
+            <!-- Enlaces a redes sociales del organizador -->
+            <div class="organizador-redes">
+              <a href="construccion.html" aria-label="LinkedIn de Leo Navarro">
+                <img src="icons/LinkedIn.png" alt="">
+              </a>
+
+              <a href="construccion.html" aria-label="X de Leo Navarro">
+                <img src="icons/X.png" alt="">
+              </a>
+
+              <a href="construccion.html" aria-label="Dribbble de Leo Navarro">
+                <img src="icons/Dribbble.png" alt="">
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Botón para contactar con el equipo -->
+        <div class="boton-centrado">
+          <a class="button" href="construccion.html">Contactar &gt;</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Sección de patrocinadores -->
+    <section class="patrocinadores-sobre">
+      <div class="container">
+
+        <!-- Título de la sección -->
+        <h2>Patrocinadores</h2>
+
+        <!-- Rejilla con los logos de patrocinadores -->
+        <div class="patro-grid">
+
+          <img src="img/Festival/1Kairo.png" alt="Kairo Metric">
+
+          <img src="img/Festival/2Solvanta.png" alt="Solvanta">
+
+          <img src="img/Festival/3Beryl.png" alt="Beryl Wave">
+
+          <img src="img/Festival/4Fluxon.png" alt="Fluxon Works">
+
+          <img src="img/Festival/5Terranova.png" alt="Terranova Media">
+
+          <img src="img/Festival/6Quanta.png" alt="Quanta Bloom">
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Sección de newsletter -->
+    <section class="newsletter-real">
+      <div class="container newsletter-contenido">
+
+        <!-- Encabezado de la newsletter -->
+        <div class="titulo-seccion">
+          <p class="etiqueta-seccion etiqueta-oscura">Mantente cerca</p>
+
+          <h2>Suscríbete a nuestra newsletter</h2>
+
+          <p>
+            Recibe novedades sobre el festival, las obras, los artistas y las próximas actividades.
+          </p>
+        </div>
+
+        <!-- Formulario de suscripción a la newsletter -->
+        <form class="newsletter-form" id="newsletter-form" action="#" method="post" novalidate>
+
+          <!-- Campo nombre -->
+          <div class="form-grupo">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre">
+            <p class="form-error" id="error-nombre"></p>
+          </div>
+
+          <!-- Campo correo -->
+          <div class="form-grupo">
+            <label for="correo">Correo</label>
+
+            <!-- Campo de correo con símbolo @ decorativo -->
+            <div class="email-campo">
+              <span>@</span>
+              <input type="email" id="correo" name="correo">
+            </div>
+
+            <p class="form-error" id="error-correo"></p>
+          </div>
+
+          <!-- Campo para indicar intereses -->
+          <div class="form-grupo">
+            <label for="interes">Cuéntanos qué te interesa</label>
+            <textarea id="interes" name="interes" rows="5"></textarea>
+            <p class="form-error" id="error-interes"></p>
+          </div>
+
+          <!-- Checkbox para aceptar los términos legales -->
+          <div class="form-check">
+            <input type="checkbox" id="acepto" name="acepto">
+            <label for="acepto">Acepto los términos legales.</label>
+          </div>
+
+          <!-- Mensaje de error del checkbox legal -->
+          <p class="form-error" id="error-acepto"></p>
+
+          <!-- Botón de envío del formulario -->
+          <button class="button" id="boton-enviar" type="submit" disabled>Enviar &gt;</button>
+
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Modal que aparece cuando el formulario se envía correctamente -->
+  <div class="modal-formulario" id="modal-formulario" hidden>
+    <div class="modal-caja" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+      <h2 id="modal-titulo">Formulario enviado</h2>
+      <button class="button" id="cerrar-modal" type="button">OK</button>
+    </div>
+  </div>
+
+  <!-- Pie de página -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+
+      <!-- Bloque con el logo y una pequeña descripción -->
+      <div class="footer-brand">
+        <img class="footer-logo" src="logo/Logo_blanco_hori.png" alt="Canvas &amp; Code">
+
+        <p>
+          Mantente informado sobre obras, artistas y actividades.
+        </p>
+
+        <p class="footer-note">
+          Proyecto académico de festival digital sobre arte generativo y código creativo.
+        </p>
+      </div>
+
+      <!-- Bloque de navegación del footer -->
+      <div class="footer-block">
+        <h2>Navegación</h2>
+
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="exposicion.html">Galería</a></li>
+          <li><a href="exposicion.html#artistas">Artistas</a></li>
+          <li><a href="comunidad.html#talleres">Programa</a></li>
+          <li><a href="sobre.html" aria-current="page">Sobre el festival</a></li>
+          <li><a href="comunidad.html">Comunidad</a></li>
+          <li><a href="construccion.html">Contacto</a></li>
+        </ul>
+      </div>
+
+      <!-- Bloque de enlaces legales -->
+      <div class="footer-block">
+        <h2>Legal</h2>
+
+        <ul>
+          <li><a href="construccion.html">Privacidad</a></li>
+          <li><a href="construccion.html">Cookies</a></li>
+          <li><a href="construccion.html">Términos</a></li>
+          <li><a href="construccion.html">Configuración</a></li>
+          <li><a href="construccion.html">Redes</a></li>
+        </ul>
+      </div>
+
+      <!-- Bloque de redes sociales -->
+      <div class="footer-block footer-social">
+        <h2>Síguenos</h2>
+
+        <ul>
+          <li><a href="construccion.html"><img src="icons/Instagram.png" alt=""> Instagram</a></li>
+          <li><a href="construccion.html"><img src="icons/Facebook.png" alt=""> Facebook</a></li>
+          <li><a href="construccion.html"><img src="icons/LinkedIn.png" alt=""> LinkedIn</a></li>
+          <li><a href="construccion.html"><img src="icons/X.png" alt=""> X</a></li>
+          <li><a href="construccion.html"><img src="icons/YouTube.png" alt=""> YouTube</a></li>
+          <li><a href="construccion.html"><img src="icons/Dribbble.png" alt=""> Dribbble</a></li>
+          <li><a href="construccion.html"><img src="icons/TikTok.png" alt=""> TikTok</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Parte inferior del footer con copyright y enlaces legales -->
+    <div class="container footer-bottom">
+      <p>© 2026 Canvas &amp; Code. Todos los derechos reservados.</p>
+
+      <div class="footer-legal-links">
+        <a href="construccion.html">Política de privacidad</a>
+        <a href="construccion.html">Términos y condiciones</a>
+        <a href="construccion.html">Política de cookies</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Archivo JavaScript principal -->
+  <script src="js/script.js"></script>
+
+</body>
+</html>
