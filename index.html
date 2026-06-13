@@ -1,58 +1,42 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <!-- Configuración básica del documento -->
   <meta charset="UTF-8">
-
-  <!-- Hace que la página se adapte correctamente a móviles y pantallas pequeñas -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Título que aparece en la pestaña del navegador -->
   <title>Canvas &amp; Code | Inicio</title>
-
-  <!-- Descripción breve de la página para buscadores -->
   <meta name="description" content="Festival digital de arte generativo, código creativo e interacción visual.">
 
-  <!-- Conexión con Google Fonts para cargar las tipografías de la web -->
+  <!-- Tipografías del proyecto -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <!-- Tipografías usadas en el proyecto -->
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600;700&amp;family=Nunito:wght@400;500;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
 
-  <!-- Icono de la pestaña del navegador -->
   <link rel="icon" href="logo/icono.png" type="image/png">
-
-  <!-- Archivo CSS principal -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-  <!-- Enlace de accesibilidad para saltar directamente al contenido principal -->
+  <!-- Salto al contenido -->
   <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
 
-  <!-- Cabecera de la página -->
+  <!-- Cabecera -->
   <header class="site-header">
     <div class="container header-content">
 
-      <!-- Logo de la web con enlace a la página de inicio -->
       <a class="logo-link" href="index.html" aria-label="Ir al inicio de Canvas &amp; Code">
         <img class="logo" src="logo/LogoHorizontal.png" alt="Canvas &amp; Code">
       </a>
 
-      <!-- Botón que abre y cierra el menú en móvil -->
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
         Menú
       </button>
 
-      <!-- Menú principal de navegación -->
+      <!-- Menú principal -->
       <nav class="main-nav" id="menu-principal" aria-label="Navegación principal">
         <ul>
-          <!-- Enlace activo porque estamos en la página de inicio -->
           <li><a class="active" href="index.html" aria-current="page">Inicio</a></li>
-
-          <!-- Enlaces a las demás páginas y secciones de la web -->
           <li><a href="exposicion.html">Exposición</a></li>
           <li><a href="exposicion.html#artistas">Artistas</a></li>
           <li><a href="comunidad.html#talleres">Programa</a></li>
@@ -60,41 +44,32 @@
           <li><a href="comunidad.html">Comunidad</a></li>
           <li><a href="construccion.html">Contacto</a></li>
 
-          <!-- Enlace de entradas dentro del menú móvil -->
           <li class="nav-entradas">
             <a href="construccion.html">Entradas</a>
           </li>
         </ul>
       </nav>
 
-      <!-- Botón de entradas visible en la cabecera -->
       <a class="header-button" href="construccion.html">Entradas</a>
 
     </div>
   </header>
 
-  <!-- Contenido principal de la página -->
   <main id="contenido">
 
-    <!-- Sección principal de presentación de la web -->
+    <!-- Hero -->
     <section class="hero-inicio">
-
-      <!-- Imagen de fondo del hero -->
       <img class="hero-imagen" src="img/Inicio/Flujo_abstracto.png" alt="Imagen abstracta con formas fluidas de arte generativo">
 
-      <!-- Capa oscura sobre la imagen para mejorar la lectura del texto -->
+      <!-- Capa para mejorar la lectura -->
       <div class="hero-capa">
         <div class="container hero-contenido">
-
-          <!-- Título principal de la página -->
           <h1>Canvas &amp; Code</h1>
 
-          <!-- Texto breve de presentación del festival -->
           <p>
             Festival digital donde el arte generativo, la inteligencia artificial y la programación creativa convergen en una experiencia única.
           </p>
 
-          <!-- Botones principales del hero -->
           <div class="hero-botones">
             <a class="button" href="exposicion.html" aria-label="Explorar la exposición interactiva de Canvas &amp; Code">Explorar &gt;</a>
             <a class="button" href="construccion.html" aria-label="Consultar entradas del festival Canvas &amp; Code">Entradas &gt;</a>
@@ -104,24 +79,18 @@
       </div>
     </section>
 
-    <!-- Sección con una descripción general del festival -->
+    <!-- Descripción del festival -->
     <section class="descripcion-real">
       <div class="container descripcion-contenido">
-
-        <!-- Etiqueta pequeña de la sección -->
         <p class="etiqueta-seccion">Festival digital</p>
-
-        <!-- Título de la sección -->
         <h2>Descripción del festival</h2>
 
-        <!-- Texto descriptivo del festival -->
         <p>
           Canvas &amp; Code conecta arte visual, programación creativa y experimentación digital.
           La web presenta una selección de obras, artistas y actividades donde el código
           se convierte en recurso creativo y expresivo.
         </p>
 
-        <!-- Enlaces de la sección de descripción -->
         <div class="descripcion-enlaces">
           <a class="button button-small" href="exposicion.html" aria-label="Ver las obras destacadas del festival">Ver obras &gt;</a>
           <a class="simple-link" href="sobre.html" aria-label="Saber más sobre el festival Canvas &amp; Code">Saber más &gt;</a>
@@ -130,20 +99,17 @@
       </div>
     </section>
 
-    <!-- Sección de obras destacadas en la página de inicio -->
+    <!-- Obras destacadas -->
     <section class="obras-real">
       <div class="container">
 
-        <!-- Encabezado de la sección de obras -->
         <div class="titulo-seccion">
           <p class="etiqueta-seccion etiqueta-oscura">Galería</p>
           <h2>Obras destacadas</h2>
         </div>
 
-        <!-- Rejilla que contiene las tarjetas de obras -->
         <div class="obras-grid">
 
-          <!-- Primera tarjeta de obra -->
           <article class="obra-card">
             <img src="img/Inicio/Paisaje_mineral.png" alt="Obra Jardín Sintético con formas minerales generativas">
 
@@ -158,7 +124,6 @@
             </div>
           </article>
 
-          <!-- Segunda tarjeta de obra -->
           <article class="obra-card">
             <img src="img/Inicio/Membrana_tensionada.png" alt="Obra Ruido Latente con una membrana visual tensionada">
 
@@ -173,7 +138,6 @@
             </div>
           </article>
 
-          <!-- Tercera tarjeta de obra -->
           <article class="obra-card">
             <img src="img/Inicio/Formas_datos.png" alt="Obra Coordenadas Invisibles con formas abstractas de datos">
 
@@ -193,11 +157,10 @@
       </div>
     </section>
 
-    <!-- Sección de artistas destacados -->
+    <!-- Bloque de artistas -->
     <section class="artistas-real" id="artistas">
       <div class="container">
 
-        <!-- Encabezado de la sección de artistas -->
         <div class="titulo-seccion titulo-claro">
           <p class="etiqueta-seccion">Creadores</p>
           <h2>Artistas destacados</h2>
@@ -207,10 +170,8 @@
           </p>
         </div>
 
-        <!-- Rejilla con las tarjetas de artistas -->
         <div class="artistas-grid">
 
-          <!-- Primera tarjeta de artista -->
           <article class="artista-card">
             <img src="img/Inicio/Vera_Solano.png" alt="Retrato de Vera Solano">
 
@@ -218,7 +179,6 @@
               <h3>Vera Solano</h3>
               <p>Artista participante</p>
 
-              <!-- Enlaces a redes sociales de la artista -->
               <div class="artista-redes">
                 <a href="construccion.html">
                   <img src="icons/LinkedIn.png" alt="LinkedIn de Vera Solano">
@@ -235,7 +195,6 @@
             </div>
           </article>
 
-          <!-- Segunda tarjeta de artista -->
           <article class="artista-card">
             <img src="img/Inicio/Bruno_Kade.png" alt="Retrato de Bruno Kade">
 
@@ -243,7 +202,6 @@
               <h3>Bruno Kade</h3>
               <p>Artista participante</p>
 
-              <!-- Enlaces a redes sociales del artista -->
               <div class="artista-redes">
                 <a href="construccion.html">
                   <img src="icons/LinkedIn.png" alt="LinkedIn de Bruno Kade">
@@ -260,7 +218,6 @@
             </div>
           </article>
 
-          <!-- Tercera tarjeta de artista -->
           <article class="artista-card">
             <img src="img/Inicio/Naira_Vidal.png" alt="Retrato de Naira Vidal">
 
@@ -268,7 +225,6 @@
               <h3>Naira Vidal</h3>
               <p>Artista participante</p>
 
-              <!-- Enlaces a redes sociales de la artista -->
               <div class="artista-redes">
                 <a href="construccion.html">
                   <img src="icons/LinkedIn.png" alt="LinkedIn de Naira Vidal">
@@ -287,7 +243,6 @@
 
         </div>
 
-        <!-- Botón para ir a la sección de artistas de la página Exposición -->
         <div class="boton-centrado">
           <a class="button" href="exposicion.html#artistas" aria-label="Conocer a los artistas destacados del festival">Conocer artistas &gt;</a>
         </div>
@@ -295,11 +250,10 @@
       </div>
     </section>
 
-    <!-- Sección de newsletter -->
+    <!-- Newsletter -->
     <section class="newsletter-real">
       <div class="container newsletter-contenido">
 
-        <!-- Encabezado de la newsletter -->
         <div class="titulo-seccion">
           <p class="etiqueta-seccion etiqueta-oscura">Conecta</p>
 
@@ -311,40 +265,34 @@
           </p>
         </div>
 
-        <!-- Formulario de suscripción a la newsletter -->
+        <!-- Formulario validado con JavaScript -->
         <form class="newsletter-form" id="newsletter-form" action="#" method="post" novalidate>
 
-          <!-- Campo nombre -->
           <div class="form-grupo">
             <label for="nombre">Nombre</label>
             <input type="text" id="nombre" name="nombre">
             <p class="form-error" id="error-nombre"></p>
           </div>
 
-          <!-- Campo correo -->
           <div class="form-grupo">
             <label for="correo">Correo</label>
             <input type="email" id="correo" name="correo">
             <p class="form-error" id="error-correo"></p>
           </div>
 
-          <!-- Campo de intereses -->
           <div class="form-grupo">
             <label for="interes">Cuéntanos qué te interesa</label>
             <textarea id="interes" name="interes" rows="5"></textarea>
             <p class="form-error" id="error-interes"></p>
           </div>
 
-          <!-- Checkbox para aceptar términos legales -->
           <div class="form-check">
             <input type="checkbox" id="acepto" name="acepto">
             <label for="acepto">Acepto los términos legales.</label>
           </div>
 
-          <!-- Mensaje de error del checkbox legal -->
           <p class="form-error" id="error-acepto"></p>
 
-          <!-- Botón de envío del formulario -->
           <button class="button" id="boton-enviar" type="submit" disabled>Enviar &gt;</button>
 
         </form>
@@ -354,7 +302,7 @@
 
   </main>
 
-  <!-- Modal que aparece cuando el formulario se envía correctamente -->
+  <!-- Modal de confirmación -->
   <div class="modal-formulario" id="modal-formulario" hidden>
     <div class="modal-caja" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
       <h2 id="modal-titulo">Formulario enviado</h2>
@@ -362,11 +310,10 @@
     </div>
   </div>
 
-  <!-- Pie de página -->
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-content">
 
-      <!-- Bloque con el logo y una pequeña descripción -->
       <div class="footer-brand">
         <img class="footer-logo" src="logo/Logo_blanco_hori.png" alt="Canvas &amp; Code">
 
@@ -379,7 +326,6 @@
         </p>
       </div>
 
-      <!-- Bloque de navegación del footer -->
       <div class="footer-block">
         <h2>Navegación</h2>
 
@@ -394,7 +340,6 @@
         </ul>
       </div>
 
-      <!-- Bloque de enlaces legales -->
       <div class="footer-block">
         <h2>Legal</h2>
 
@@ -407,7 +352,6 @@
         </ul>
       </div>
 
-      <!-- Bloque de redes sociales -->
       <div class="footer-block footer-social">
         <h2>Síguenos</h2>
 
@@ -424,7 +368,6 @@
 
     </div>
 
-    <!-- Parte inferior del footer con copyright y enlaces legales -->
     <div class="container footer-bottom">
       <p>© 2026 Canvas &amp; Code. Todos los derechos reservados.</p>
 
@@ -436,7 +379,6 @@
     </div>
   </footer>
 
-  <!-- Archivo JavaScript principal -->
   <script src="js/script.js"></script>
 
 </body>

@@ -1,102 +1,76 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <!-- Configuración básica del documento -->
   <meta charset="UTF-8">
-
-  <!-- Hace que la web se adapte bien a móviles y otros tamaños de pantalla -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Título que aparece en la pestaña del navegador -->
   <title>Canvas &amp; Code | Exposición interactiva</title>
-
-  <!-- Descripción de la página para buscadores -->
   <meta name="description" content="Exposición interactiva de Canvas &amp; Code con obras generativas, artistas digitales y experiencias visuales.">
 
-  <!-- Conexión con Google Fonts para cargar las tipografías -->
+  <!-- Tipografías del proyecto -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <!-- Tipografías usadas en la web -->
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600;700&amp;family=Nunito:wght@400;500;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
 
-  <!-- Icono de la pestaña del navegador -->
   <link rel="icon" href="logo/icono.png" type="image/png">
-
-  <!-- Archivo CSS principal -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-  <!-- Enlace de accesibilidad para saltar directamente al contenido principal -->
+  <!-- Salto al contenido -->
   <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
 
-  <!-- Cabecera de la página -->
+  <!-- Cabecera -->
   <header class="site-header">
     <div class="container header-content">
 
-      <!-- Logo de la web con enlace al inicio -->
       <a class="logo-link" href="index.html" aria-label="Ir al inicio de Canvas &amp; Code">
         <img class="logo" src="logo/LogoHorizontal.png" alt="Canvas &amp; Code">
       </a>
 
-      <!-- Botón para abrir y cerrar el menú en móvil -->
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
         Menú
       </button>
 
-      <!-- Menú principal de navegación -->
+      <!-- Menú principal -->
       <nav class="main-nav" id="menu-principal" aria-label="Navegación principal">
         <ul>
-          <!-- Enlaces principales de la web -->
           <li><a href="index.html">Inicio</a></li>
-
-          <!-- Enlace activo porque esta es la página de Exposición -->
           <li><a class="active" href="exposicion.html" aria-current="page">Exposición</a></li>
-
           <li><a href="exposicion.html#artistas">Artistas</a></li>
           <li><a href="comunidad.html#talleres">Programa</a></li>
           <li><a href="sobre.html">Sobre el festival</a></li>
           <li><a href="comunidad.html">Comunidad</a></li>
           <li><a href="construccion.html" aria-label="Ir a la página de contacto en construcción">Contacto</a></li>
 
-          <!-- Enlace de entradas dentro del menú móvil -->
           <li class="nav-entradas">
             <a href="construccion.html" aria-label="Consultar entradas del festival Canvas &amp; Code">Entradas</a>
           </li>
         </ul>
       </nav>
 
-      <!-- Botón de entradas visible en la cabecera -->
       <a class="header-button" href="construccion.html" aria-label="Consultar entradas del festival Canvas &amp; Code">Entradas</a>
 
     </div>
   </header>
 
-  <!-- Contenido principal de la página -->
   <main id="contenido">
 
-    <!-- Sección principal de presentación de la exposición -->
+    <!-- Hero -->
     <section class="hero-exposicion">
-
-      <!-- Imagen de fondo del hero -->
       <img class="hero-imagen" src="img/Exposicion/Galería_algoritmica.png" alt="Sala de exposición digital con instalaciones de arte generativo">
 
-      <!-- Capa oscura sobre la imagen para que el texto se lea mejor -->
+      <!-- Capa para mejorar la lectura -->
       <div class="hero-capa">
         <div class="container hero-contenido">
-
-          <!-- Título principal de la página -->
           <h1>Exposición interactiva</h1>
 
-          <!-- Texto introductorio de la exposición -->
           <p>
             Entra en un mundo donde el código genera arte. Explora, interactúa y modifica
             visualmente las obras en tiempo real.
           </p>
 
-          <!-- Botones que llevan a secciones internas de la misma página -->
           <div class="hero-botones">
             <a class="button" href="#obras" aria-label="Explorar las obras destacadas de la exposición">Explorar &gt;</a>
             <a class="button" href="#galeria" aria-label="Ir a la galería interactiva de la exposición">Galería &gt;</a>
@@ -106,27 +80,22 @@
       </div>
     </section>
 
-    <!-- Sección explicativa sobre el arte generativo -->
+    <!-- Arte generativo -->
     <section class="arte-generativo">
       <div class="container arte-generativo-contenido">
-
-        <!-- Título de la sección -->
         <h2>¿Qué es el arte generativo?</h2>
 
-        <!-- Primer párrafo explicativo -->
         <p>
           El arte generativo nace del código. Los algoritmos crean formas, colores y
           movimientos que evolucionan según reglas matemáticas. No hay dos obras iguales.
           Cada ejecución es única, impredecible y viva.
         </p>
 
-        <!-- Segundo párrafo explicativo -->
         <p>
           La máquina no reemplaza al artista, sino que amplía sus posibilidades creativas.
           Aquí la programación es el pincel y los datos son el lienzo.
         </p>
 
-        <!-- Enlaces de la sección -->
         <div class="descripcion-enlaces">
           <a class="button button-small" href="#galeria" aria-label="Descubrir la galería interactiva de la exposición">Descubrir &gt;</a>
           <a class="simple-link" href="construccion.html" aria-label="Saber más sobre el arte generativo">Saber más &gt;</a>
@@ -135,32 +104,25 @@
       </div>
     </section>
 
-    <!-- Sección de galería interactiva -->
+    <!-- Galería interactiva -->
     <section class="galeria-interactiva" id="galeria">
       <div class="container galeria-grid">
 
-        <!-- Bloque de texto de la galería -->
         <div class="galeria-texto">
-
-          <!-- Icono decorativo de la sección -->
           <img class="galeria-icono" src="icons/Galeria.png" alt="" aria-hidden="true">
 
-          <!-- Título de la galería interactiva -->
           <h2>Galería interactiva</h2>
 
-          <!-- Explicación de la interacción con las obras -->
           <p>
             El visitante toca las obras y modifica parámetros en tiempo real.
             Los cambios visuales ocurren al instante, transformando cada pieza
             según su intervención.
           </p>
 
-          <!-- Botón que lleva a las obras destacadas -->
           <a class="button galeria-boton" href="#obras" aria-label="Ir a las obras destacadas de la exposición">Ir a la galería &gt;</a>
 
         </div>
 
-        <!-- Imagen de apoyo de la galería -->
         <div class="galeria-imagen">
           <img src="img/Exposicion/Voxel_modular.png" alt="Galería algorítmica con módulos y estructuras digitales">
         </div>
@@ -168,11 +130,10 @@
       </div>
     </section>
 
-    <!-- Sección que explica cómo interactuar con las obras -->
+    <!-- Interacción -->
     <section class="interactuar-obras">
       <div class="container">
 
-        <!-- Encabezado de la sección -->
         <div class="titulo-seccion titulo-claro">
           <p class="etiqueta-seccion">Interacción</p>
 
@@ -183,10 +144,8 @@
           </p>
         </div>
 
-        <!-- Rejilla con las tarjetas de interacción -->
         <div class="interaccion-grid">
 
-          <!-- Primera tarjeta de interacción -->
           <article class="interaccion-card">
             <img src="icons/Tocar.png" alt="" aria-hidden="true">
 
@@ -199,7 +158,6 @@
             <a href="construccion.html" aria-label="Explorar cómo tocar una obra interactiva">Explorar &gt;</a>
           </article>
 
-          <!-- Segunda tarjeta de interacción -->
           <article class="interaccion-card">
             <img src="icons/Modificar_parametros.png" alt="" aria-hidden="true">
 
@@ -212,7 +170,6 @@
             <a href="construccion.html" aria-label="Explorar cómo modificar parámetros de una obra interactiva">Explorar &gt;</a>
           </article>
 
-          <!-- Tercera tarjeta de interacción -->
           <article class="interaccion-card">
             <img src="icons/Observar.png" alt="" aria-hidden="true">
 
@@ -230,11 +187,10 @@
       </div>
     </section>
 
-    <!-- Sección de obras destacadas -->
+    <!-- Obras destacadas -->
     <section class="obras-exposicion" id="obras">
       <div class="container">
 
-        <!-- Encabezado de la sección de obras -->
         <div class="titulo-seccion">
           <p class="etiqueta-seccion etiqueta-oscura">Destacadas</p>
 
@@ -246,10 +202,8 @@
           </p>
         </div>
 
-        <!-- Rejilla con las tarjetas de obras -->
         <div class="obras-expo-grid">
 
-          <!-- Primera obra destacada -->
           <article class="obra-expo-card">
             <img src="img/Exposicion/Paisaje_mineral.png" alt="Obra Jardín Sintético">
 
@@ -263,7 +217,6 @@
             <a href="construccion.html" aria-label="Explorar la obra Jardín Sintético">Explorar &gt;</a>
           </article>
 
-          <!-- Segunda obra destacada -->
           <article class="obra-expo-card">
             <img src="img/Exposicion/Membrana_tensionada.png" alt="Obra Ruido Latente">
 
@@ -277,7 +230,6 @@
             <a href="construccion.html" aria-label="Explorar la obra Ruido Latente">Explorar &gt;</a>
           </article>
 
-          <!-- Tercera obra destacada -->
           <article class="obra-expo-card">
             <img src="img/Exposicion/Formas_datos.png" alt="Obra Coordenadas Invisibles">
 
@@ -296,11 +248,10 @@
       </div>
     </section>
 
-    <!-- Sección de artistas de la exposición -->
+    <!-- Bloque de artistas -->
     <section class="artistas-exposicion" id="artistas">
       <div class="container">
 
-        <!-- Encabezado de la sección de artistas -->
         <div class="titulo-seccion titulo-claro">
           <p class="etiqueta-seccion">Creadores</p>
 
@@ -311,10 +262,8 @@
           </p>
         </div>
 
-        <!-- Rejilla con las tarjetas de artistas -->
         <div class="artistas-expo-grid">
 
-          <!-- Primera artista -->
           <article class="artista-expo-card">
             <img src="img/Exposicion/Vera_Solano.png" alt="Retrato de Vera Solano">
 
@@ -331,7 +280,6 @@
             </div>
           </article>
 
-          <!-- Segundo artista -->
           <article class="artista-expo-card">
             <img src="img/Exposicion/Bruno_Kade.png" alt="Retrato de Bruno Kade">
 
@@ -348,7 +296,6 @@
             </div>
           </article>
 
-          <!-- Tercera artista -->
           <article class="artista-expo-card">
             <img src="img/Exposicion/Naira_Vidal.png" alt="Retrato de Naira Vidal">
 
@@ -370,11 +317,10 @@
       </div>
     </section>
 
-    <!-- Sección de newsletter -->
+    <!-- Newsletter -->
     <section class="newsletter-real">
       <div class="container newsletter-contenido">
 
-        <!-- Encabezado de la newsletter -->
         <div class="titulo-seccion">
           <p class="etiqueta-seccion etiqueta-oscura">Conecta</p>
 
@@ -385,40 +331,34 @@
           </p>
         </div>
 
-        <!-- Formulario de suscripción a la newsletter -->
+        <!-- Formulario validado con JavaScript -->
         <form class="newsletter-form" id="newsletter-form" action="#" method="post" novalidate>
 
-          <!-- Campo nombre -->
           <div class="form-grupo">
             <label for="nombre">Nombre</label>
             <input type="text" id="nombre" name="nombre">
             <p class="form-error" id="error-nombre"></p>
           </div>
 
-          <!-- Campo correo -->
           <div class="form-grupo">
             <label for="correo">Correo</label>
             <input type="email" id="correo" name="correo">
             <p class="form-error" id="error-correo"></p>
           </div>
 
-          <!-- Campo de intereses -->
           <div class="form-grupo">
             <label for="interes">Cuéntanos qué te interesa</label>
             <textarea id="interes" name="interes" rows="5"></textarea>
             <p class="form-error" id="error-interes"></p>
           </div>
 
-          <!-- Checkbox para aceptar términos legales -->
           <div class="form-check">
             <input type="checkbox" id="acepto" name="acepto">
             <label for="acepto">Acepto los términos legales.</label>
           </div>
 
-          <!-- Mensaje de error del checkbox legal -->
           <p class="form-error" id="error-acepto"></p>
 
-          <!-- Botón de envío del formulario -->
           <button class="button" id="boton-enviar" type="submit" disabled>Enviar &gt;</button>
 
         </form>
@@ -428,7 +368,7 @@
 
   </main>
 
-  <!-- Modal que aparece cuando el formulario se envía correctamente -->
+  <!-- Modal de confirmación -->
   <div class="modal-formulario" id="modal-formulario" hidden>
     <div class="modal-caja" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
       <h2 id="modal-titulo">Formulario enviado</h2>
@@ -436,11 +376,10 @@
     </div>
   </div>
 
-  <!-- Pie de página -->
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-content">
 
-      <!-- Bloque con el logo y una pequeña descripción -->
       <div class="footer-brand">
         <img class="footer-logo" src="logo/Logo_blanco_hori.png" alt="Canvas &amp; Code">
 
@@ -453,7 +392,6 @@
         </p>
       </div>
 
-      <!-- Bloque de navegación del footer -->
       <div class="footer-block">
         <h2>Navegación</h2>
 
@@ -468,7 +406,6 @@
         </ul>
       </div>
 
-      <!-- Bloque de enlaces legales -->
       <div class="footer-block">
         <h2>Legal</h2>
 
@@ -481,7 +418,6 @@
         </ul>
       </div>
 
-      <!-- Bloque de redes sociales -->
       <div class="footer-block footer-social">
         <h2>Síguenos</h2>
 
@@ -498,7 +434,6 @@
 
     </div>
 
-    <!-- Parte inferior del footer con copyright y enlaces legales -->
     <div class="container footer-bottom">
       <p>© 2026 Canvas &amp; Code. Todos los derechos reservados.</p>
 
@@ -510,7 +445,6 @@
     </div>
   </footer>
 
-  <!-- Archivo JavaScript principal -->
   <script src="js/script.js"></script>
 
 </body>

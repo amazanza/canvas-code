@@ -1,127 +1,94 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <!-- Configuración básica del documento -->
   <meta charset="UTF-8">
-
-  <!-- Hace que la página se adapte a móviles y otros tamaños de pantalla -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Título que aparece en la pestaña del navegador -->
   <title>Canvas &amp; Code | Comunidad</title>
-
-  <!-- Descripción breve de la página para buscadores -->
   <meta name="description" content="Comunidad de Canvas &amp; Code: talleres, charlas, proyectos compartidos y propuestas creativas relacionadas con el arte generativo.">
 
-  <!-- Conexión con Google Fonts para cargar las tipografías -->
+  <!-- Tipografías del proyecto -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <!-- Tipografías usadas en la web -->
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600;700&amp;family=Nunito:wght@400;500;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
 
-  <!-- Icono de la pestaña del navegador -->
   <link rel="icon" href="logo/icono.png" type="image/png">
-
-  <!-- Archivo CSS principal -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-  <!-- Enlace de accesibilidad para saltar directamente al contenido principal -->
+  <!-- Salto al contenido -->
   <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
 
-  <!-- Cabecera de la página -->
+  <!-- Cabecera -->
   <header class="site-header">
     <div class="container header-content">
 
-      <!-- Logo de la web con enlace al inicio -->
       <a class="logo-link" href="index.html" aria-label="Ir al inicio de Canvas &amp; Code">
         <img class="logo" src="logo/LogoHorizontal.png" alt="Canvas &amp; Code">
       </a>
 
-      <!-- Botón para abrir y cerrar el menú en móvil -->
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
         Menú
       </button>
 
-      <!-- Menú principal de navegación -->
+      <!-- Menú principal -->
       <nav class="main-nav" id="menu-principal" aria-label="Navegación principal">
         <ul>
-          <!-- Enlaces principales de la web -->
           <li><a href="index.html">Inicio</a></li>
           <li><a href="exposicion.html">Exposición</a></li>
           <li><a href="exposicion.html#artistas">Artistas</a></li>
           <li><a href="comunidad.html#talleres">Programa</a></li>
           <li><a href="sobre.html">Sobre el festival</a></li>
-
-          <!-- Enlace activo porque esta es la página Comunidad -->
           <li><a class="active" href="comunidad.html" aria-current="page">Comunidad</a></li>
-
           <li><a href="construccion.html" aria-label="Ir a la página de contacto en construcción">Contacto</a></li>
 
-          <!-- Enlace de entradas dentro del menú móvil -->
           <li class="nav-entradas">
             <a href="construccion.html" aria-label="Consultar entradas del festival Canvas & Code">Entradas</a>
           </li>
         </ul>
       </nav>
 
-      <!-- Botón de entradas visible en la cabecera -->
       <a class="header-button" href="construccion.html" aria-label="Consultar entradas del festival Canvas & Code">Entradas</a>
 
     </div>
   </header>
 
-  <!-- Contenido principal de la página -->
   <main id="contenido">
 
-    <!-- Sección principal de presentación de Comunidad -->
+    <!-- Hero -->
     <section class="hero-comunidad">
       <div class="container hero-comunidad-contenido">
-
-        <!-- Etiqueta pequeña de la sección -->
         <p class="etiqueta-seccion">Participa</p>
-
-        <!-- Título principal de la página -->
         <h1>Comunidad</h1>
 
-        <!-- Texto introductorio de la comunidad -->
         <p>
           Un espacio para conectar con personas interesadas en el arte generativo,
           la programación creativa y la cultura digital. Aquí el festival continúa
           más allá de la exposición.
         </p>
 
-        <!-- Botones principales del hero -->
         <div class="hero-botones">
           <a class="button button-hero-claro" href="#propuesta" aria-label="Unirse a la comunidad enviando una propuesta">Unirse</a>
           <a class="button button-hero-oscuro" href="#talleres" aria-label="Explorar los talleres prácticos de la comunidad">Explorar</a>
         </div>
 
-        <!-- Imagen principal de la página Comunidad -->
         <img src="img/Comunidad/Artista_generativa.png" alt="Ilustración de una artista generativa trabajando con una tableta digital">
 
       </div>
     </section>
 
-    <!-- Sección de presentación del encuentro creativo -->
+    <!-- Encuentro -->
     <section class="encuentro-comunidad">
       <div class="container encuentro-contenido">
-
-        <!-- Etiqueta pequeña de la sección -->
         <p class="etiqueta-seccion etiqueta-encuentro">Encuentro</p>
-
-        <!-- Título de la sección -->
         <h2>Un punto de encuentro creativo</h2>
 
-        <!-- Texto breve de la sección -->
         <p>
           La comunidad reúne artistas, diseñadores, programadores y curiosos.
         </p>
 
-        <!-- Botones de la sección encuentro -->
         <div class="encuentro-botones">
           <a class="button button-encuentro-claro" href="#propuesta" aria-label="Participar enviando una propuesta a la comunidad">Participar</a>
           <a class="button button-encuentro-oscuro" href="#talleres" aria-label="Explorar los talleres y actividades de la comunidad">Explorar</a>
@@ -130,11 +97,10 @@
       </div>
     </section>
 
-    <!-- Sección de talleres prácticos -->
+    <!-- Talleres -->
     <section class="talleres-comunidad" id="talleres">
       <div class="container">
 
-        <!-- Encabezado de la sección de talleres -->
         <div class="titulo-seccion">
           <p class="etiqueta-seccion etiqueta-oscura">Aprender</p>
 
@@ -145,10 +111,8 @@
           </p>
         </div>
 
-        <!-- Rejilla con las tarjetas de talleres -->
         <div class="talleres-grid">
 
-          <!-- Primera tarjeta de taller -->
           <article class="comunidad-card">
             <img src="img/Comunidad/Estructura_codificada.png" alt="Pantalla con código creativo">
 
@@ -165,7 +129,6 @@
             </div>
           </article>
 
-          <!-- Segunda tarjeta de taller -->
           <article class="comunidad-card">
             <img src="img/Comunidad/Lluvia_codigo.png" alt="Lluvia de código verde sobre fondo oscuro">
 
@@ -182,7 +145,6 @@
             </div>
           </article>
 
-          <!-- Tercera tarjeta de taller, con formato horizontal en escritorio -->
           <article class="comunidad-card comunidad-card-horizontal">
             <img src="img/Comunidad/Interfaz_translucida.png" alt="Detalle de una interfaz translúcida con formas generativas">
 
@@ -204,11 +166,10 @@
       </div>
     </section>
 
-    <!-- Sección de charlas y encuentros -->
+    <!-- Charlas -->
     <section class="charlas-comunidad">
       <div class="container">
 
-        <!-- Encabezado de la sección de charlas -->
         <div class="titulo-seccion titulo-claro">
           <p class="etiqueta-seccion">Diálogo</p>
 
@@ -219,10 +180,8 @@
           </p>
         </div>
 
-        <!-- Rejilla con las tarjetas de charlas -->
         <div class="charlas-grid">
 
-          <!-- Primera charla -->
           <article class="charla-card">
             <img src="icons/Obra.png" alt="" aria-hidden="true">
 
@@ -235,7 +194,6 @@
             <a href="#propuesta" aria-label="Ver información de la charla Cuando el código también dibuja">Ver &gt;</a>
           </article>
 
-          <!-- Segunda charla -->
           <article class="charla-card">
             <img src="icons/IA_artistica.png" alt="" aria-hidden="true">
 
@@ -248,7 +206,6 @@
             <a href="#propuesta" aria-label="Ver información de la charla Inteligencia artificial y mirada artística">Ver &gt;</a>
           </article>
 
-          <!-- Tercera charla -->
           <article class="charla-card">
             <img src="icons/Interaccion.png" alt="" aria-hidden="true">
 
@@ -266,11 +223,10 @@
       </div>
     </section>
 
-    <!-- Sección de proyectos compartidos -->
+    <!-- Proyectos -->
     <section class="proyectos-comunidad">
       <div class="container">
 
-        <!-- Encabezado de la sección de proyectos -->
         <div class="titulo-seccion">
           <p class="etiqueta-seccion etiqueta-oscura">Muestra</p>
 
@@ -281,10 +237,8 @@
           </p>
         </div>
 
-        <!-- Rejilla con las tarjetas de proyectos -->
         <div class="proyectos-grid">
 
-          <!-- Proyecto destacado -->
           <article class="proyecto-card proyecto-destacado">
             <div class="proyecto-texto">
               <p class="comunidad-categoria">Proyecto</p>
@@ -301,7 +255,6 @@
             <img src="img/Comunidad/Instalacion_luminica.png" alt="Instalación artística luminosa con forma circular">
           </article>
 
-          <!-- Segundo proyecto -->
           <article class="proyecto-card">
             <div class="proyecto-texto">
               <p class="comunidad-categoria">Proyecto</p>
@@ -318,7 +271,6 @@
             <img src="img/Comunidad/Nodos_orbitas.png" alt="Visualización digital con nodos y órbitas">
           </article>
 
-          <!-- Tercer proyecto -->
           <article class="proyecto-card">
             <div class="proyecto-texto">
               <p class="comunidad-categoria">Proyecto</p>
@@ -340,11 +292,10 @@
       </div>
     </section>
 
-    <!-- Sección para enviar una propuesta a la comunidad -->
+    <!-- Propuesta -->
     <section class="propuesta-comunidad" id="propuesta">
       <div class="container propuesta-grid">
 
-        <!-- Información de contacto y explicación de la propuesta -->
         <div class="propuesta-info">
           <p class="etiqueta-seccion etiqueta-oscura">Propuesta</p>
 
@@ -354,7 +305,6 @@
             Comparte tu obra, taller o idea con la comunidad creativa.
           </p>
 
-          <!-- Datos de contacto -->
           <ul>
             <li><a href="mailto:contacto@canvascode.com">contacto@canvascode.com</a></li>
             <li><a href="tel:+34123456789">+34 123 456 789</a></li>
@@ -362,10 +312,9 @@
           </ul>
         </div>
 
-        <!-- Formulario para enviar una propuesta -->
+        <!-- Formulario de propuesta -->
         <form class="formulario-propuesta" id="formulario-propuesta" action="#" method="post" novalidate>
 
-          <!-- Primera fila de campos: nombre y apellidos -->
           <div class="form-doble">
             <div class="form-grupo">
               <label for="nombre-propuesta">Nombre</label>
@@ -380,7 +329,6 @@
             </div>
           </div>
 
-          <!-- Segunda fila de campos: correo y teléfono -->
           <div class="form-doble">
             <div class="form-grupo">
               <label for="correo-propuesta">Correo</label>
@@ -395,7 +343,6 @@
             </div>
           </div>
 
-          <!-- Selector del tipo de propuesta -->
           <div class="form-grupo">
             <label for="tipo-propuesta">Tipo de propuesta</label>
 
@@ -410,7 +357,6 @@
             <p class="form-error" id="error-tipo-propuesta" aria-live="polite"></p>
           </div>
 
-          <!-- Grupo de checkboxes para describir el perfil del participante -->
           <fieldset class="checks-propuesta" aria-describedby="error-perfil-propuesta">
             <legend>¿Qué describe mejor tu trabajo?</legend>
 
@@ -447,23 +393,19 @@
             <p class="form-error" id="error-perfil-propuesta" aria-live="polite"></p>
           </fieldset>
 
-          <!-- Campo para escribir el mensaje o explicación de la propuesta -->
           <div class="form-grupo">
             <label for="mensaje-propuesta">Mensaje</label>
             <textarea id="mensaje-propuesta" name="mensaje" rows="6" placeholder="Cuéntanos tu idea o proyecto" required aria-required="true" aria-describedby="error-mensaje-propuesta"></textarea>
             <p class="form-error" id="error-mensaje-propuesta" aria-live="polite"></p>
           </div>
 
-          <!-- Checkbox para aceptar las condiciones legales -->
           <div class="form-check">
             <input id="legal-propuesta" type="checkbox" name="legal" required aria-required="true" aria-describedby="error-legal-propuesta">
             <label for="legal-propuesta">Acepto las condiciones legales del festival.</label>
           </div>
 
-          <!-- Mensaje de error del checkbox legal -->
           <p class="form-error" id="error-legal-propuesta" aria-live="polite"></p>
 
-          <!-- Botón de envío del formulario de propuesta -->
           <button class="button" id="boton-propuesta" type="submit" disabled>Enviar</button>
 
         </form>
@@ -471,11 +413,10 @@
       </div>
     </section>
 
-    <!-- Sección de newsletter -->
+    <!-- Newsletter -->
     <section class="newsletter-real">
       <div class="container newsletter-contenido">
 
-        <!-- Encabezado de la newsletter -->
         <div class="titulo-seccion">
           <p class="etiqueta-seccion etiqueta-oscura">Newsletter</p>
 
@@ -486,40 +427,34 @@
           </p>
         </div>
 
-        <!-- Formulario de suscripción a la newsletter -->
+        <!-- Formulario de newsletter -->
         <form class="newsletter-form" id="newsletter-form" action="#" method="post" novalidate>
 
-          <!-- Campo nombre -->
           <div class="form-grupo">
             <label for="nombre">Nombre</label>
             <input id="nombre" type="text" name="newsletter-nombre" autocomplete="given-name" required aria-required="true" aria-describedby="error-nombre">
             <p class="form-error" id="error-nombre" aria-live="polite"></p>
           </div>
 
-          <!-- Campo correo -->
           <div class="form-grupo">
             <label for="correo">Correo</label>
             <input id="correo" type="email" name="newsletter-correo" autocomplete="email" required aria-required="true" aria-describedby="error-correo">
             <p class="form-error" id="error-correo" aria-live="polite"></p>
           </div>
 
-          <!-- Campo de mensaje o interés -->
           <div class="form-grupo">
             <label for="interes">Mensaje</label>
             <textarea id="interes" name="newsletter-mensaje" rows="5" placeholder="Tu mensaje" required aria-required="true" aria-describedby="error-interes"></textarea>
             <p class="form-error" id="error-interes" aria-live="polite"></p>
           </div>
 
-          <!-- Checkbox para aceptar términos legales -->
           <div class="form-check">
             <input type="checkbox" id="acepto" name="newsletter-legal" required aria-required="true" aria-describedby="error-acepto">
             <label for="acepto">Acepto los términos legales.</label>
           </div>
 
-          <!-- Mensaje de error del checkbox legal -->
           <p class="form-error" id="error-acepto" aria-live="polite"></p>
 
-          <!-- Botón de envío de la newsletter -->
           <div class="boton-centrado">
             <button class="button" id="boton-enviar" type="submit" disabled>Suscríbete</button>
           </div>
@@ -531,7 +466,7 @@
 
   </main>
 
-  <!-- Modal que aparece cuando un formulario se envía correctamente -->
+  <!-- Modal de confirmación -->
   <div class="modal-formulario" id="modal-formulario" hidden>
     <div class="modal-caja" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
       <h2 id="modal-titulo">Formulario enviado</h2>
@@ -540,11 +475,10 @@
     </div>
   </div>
 
-  <!-- Pie de página -->
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-content">
 
-      <!-- Bloque con logo y descripción breve -->
       <div class="footer-brand">
         <img class="footer-logo" src="logo/Logo_blanco_hori.png" alt="Canvas &amp; Code">
 
@@ -557,7 +491,6 @@
         </p>
       </div>
 
-      <!-- Bloque de navegación del footer -->
       <div class="footer-block">
         <h2>Navegación</h2>
 
@@ -572,7 +505,6 @@
         </ul>
       </div>
 
-      <!-- Bloque de enlaces legales -->
       <div class="footer-block">
         <h2>Legal</h2>
 
@@ -585,7 +517,6 @@
         </ul>
       </div>
 
-      <!-- Bloque de redes sociales -->
       <div class="footer-block footer-social">
         <h2>Síguenos</h2>
 
@@ -602,7 +533,6 @@
 
     </div>
 
-    <!-- Parte inferior del footer con copyright y enlaces legales -->
     <div class="container footer-bottom">
       <p>© 2026 Canvas &amp; Code. Todos los derechos reservados.</p>
 
@@ -614,7 +544,6 @@
     </div>
   </footer>
 
-  <!-- Archivo JavaScript principal -->
   <script src="js/script.js"></script>
 
 </body>
